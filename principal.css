@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500;1,600&display=swap');
 
 @font-face {
-  font-family: Aquus-Regular;
+  font-family: aquus;
   src: url(fontes/Aquus-Regular.ttf) format('truetype');
 }
 
@@ -24,9 +24,9 @@ body {
 }
 
 body {
-  background-color: #ffffff;
   display: block;
-  display: flex;
+  background-color: #ffffff;
+  overflow-x: hidden;
   transition: .5s;
 }
 
@@ -751,14 +751,14 @@ div .ondas {
 }
 
 .somos-incept {
-  font-size: min(80px, 18vw) !important;
+  font-size: min(70px, 18vw) !important;
   background: linear-gradient(180deg, #FFF 56.25%, rgba(255, 255, 255, 0.00) 100%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   mix-blend-mode: difference;
   text-align: center !important;
-  font-family: Aquus-Regular;
+  font-family: "aquus", sans-serif;
   font-style: normal;
   line-height: normal;
   letter-spacing: min(30px, 3vw);
@@ -769,9 +769,9 @@ div .ondas {
 }
 
 .txt-init {
-  font-size: min(17px, 3vw) !important;
+  font-size: min(17px, 4vw) !important;
   font-family: "Montserrat";
-  font-weight: 100 !important;
+  font-weight: 200 !important;
 }
 
 .deslizeposition {
@@ -780,9 +780,9 @@ div .ondas {
 }
 
 .deslize {
-  font-size: min(35px, 5vw) !important;
+  font-size: min(30px, 5vw) !important;
   text-align: center;
-  font-family: "Aquus-Regular", sans-serif;
+  font-family: "aquus", sans-serif;
   align-items: bottom !important;
   letter-spacing: 4px;
   position: relative;
@@ -837,7 +837,7 @@ div .ondas {
 
 
 .txt-animado {
-  font-family: Aquus-Regular;
+  font-family: aquus;
   /* font-size: 80px; */
   background: linear-gradient(180deg, #FFF 56.25%, rgba(255, 255, 255, 0.00) 100%);
   background-clip: text;
