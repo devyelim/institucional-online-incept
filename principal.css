@@ -24,7 +24,7 @@ body {
 }
 
 body {
-  display: block;
+  display: flex;
   background-color: #ffffff;
   overflow-x: hidden;
   transition: .5s;
