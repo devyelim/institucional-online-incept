@@ -1,0 +1,955 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+  <head>
+    <!-- Meta tags Obrigatórias -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport"
+    content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <!-- Bootstrap 5.2 e 5.2  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    
+    <!-- Css 3.0 -->
+    <link rel="stylesheet" href="principal.css">
+    <link rel="stylesheet" href="personalizados.css">
+    <link rel="stylesheet" href="galeria.css">
+    <link rel="stylesheet" href="loading.scss">
+
+    <!-- Jss -->
+    <!-- <script defer src="loading.js"></script> -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/three@0.134.0/build/three.min.js"></script> -->
+
+    <!-- Icones Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <title>Incept Desing</title>
+    <link rel="shortcut icon" type="imagex/png" href="img/incept-ligth.ico">
+  </head>
+
+  <body>
+    <!-- Tela de carregamento -->
+    <div class="tela-carregamento" id="telaCarregamento"> 
+      <img class="img-fluid" style="width: 100px; height: 100px;" src="img/giphy.gif">
+    </div>
+    
+
+    <div class="container-fluid mx-auto flex-column" style="padding: 0px !important;" id="conteudoPagina">
+    <!-- Navbar responsivo em escala lg -->
+
+      <nav id="menu" class="navbar bg-transparent fixed-top navbar-expand-lg navbar-dark mb-4 fall" aria-label="Navbar">
+      
+        <div class="container">
+          <a  class="navbar-brand" href="/index1.html">
+            <img id="logo" src="img/incept-ligth.png" alt="Incept Design">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarsExample07" aria-controls="navbarsExample07"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="bi bi-list" style="width: 40px !important; height: 50px;"></span> 
+          </button>
+          
+          <div class="align-items-end collapse navbar-collapse"
+            id="navbarsExample07" style="flex-grow: 0 !important;">
+            <ul id="ulnav" class="padding-nav navbar-nav me-auto mb-2 mb-lg-0 mt-2">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="#">Portifolio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active">Serviços</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active">Quem somos</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link active dropdown-toggle" href="#"
+                  data-bs-toggle="dropdown" aria-expanded="false">Contato</a>
+                <ul id="dropnav" class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Instagram</a></li>
+                  <li><a class="dropdown-item" href="#">Facebook</a></li>
+                  <li><a class="dropdown-item" href="#">Whatsapp</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>            
+        </div>
+        
+      </nav>
+        
+      <main>
+        <!-- Capa inicial, tambem em escala lg e backgroung responsivo -->        
+        <section id="Inicio" class="herobk text-center img-fluid  py-lg-8 hcf-bp-center hcf-bs-cover hcf-overlay">          
+          <div class="ondas" id="topo">
+            <div class="onda1" id="onda1"></div>
+            <div class="onda4" id="onda2"></div>
+            <div class="onda2" id="onda3"></div>
+            <div class="onda3" id="onda4"></div>
+          </div>
+          
+          <!-- <svg class="mysvg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1881 712" fill="none">
+            <path d="M0 469.891V0H1881V469.891C1772.32 485.936 1625.3 878.235 1463.29 629.769C1243.96 293.395 1021.09 433.091 868.809 378.778C606.922 285.373 481.603 228.17 353.547 394.823C228.496 557.566 97.5527 523.375 0 469.891Z" fill="black" fill-opacity="0.6"/>
+          </svg> -->
+          <div class="si-container px-4 text-center vertical">
+            <div class="nocturne visit-card">
+              <h1 class="somos-incept my-4">Somos Incept </h1>
+              <div class="col-lg-4 mx-auto">
+                <p class="txt-init">Criativa e socialmente consciente, 
+                  somos especializados em design estratégico e empresarial.</p>
+              </div>
+              
+              <div class="deslize">
+                <p >DESLIZE</p>
+                <svg class="seta" xmlns="http://www.w3.org/2000/svg" width="16" height="152" viewBox="0 0 16 152" fill="none">
+                  <g >
+                  <circle cx="8.06769" cy="6.36603" r="4.51095" stroke="white" stroke-width="1.8"/>
+                    <g style="mix-blend-mode:difference">
+                    <path style="mix-blend-mode:difference;" d="M7.36028 150.85C7.7508 151.24 8.38397 151.24 8.77449 150.85L15.1385 144.486C15.529 144.095 15.529 143.462 15.1385 143.072C14.7479 142.681 14.1148 142.681 13.7242 143.072L8.06738 148.729L2.41053 143.072C2.02 142.681 1.38684 142.681 0.996315 143.072C0.605791 143.462 0.605791 144.095 0.996315 144.486L7.36028 150.85ZM7.06738 11.777L7.06738 150.143H9.06738L9.06738 11.777H7.06738Z" fill="white"/>
+                    </g>
+                  </g>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <div class="onda-position">
+          <svg class="onda-light ondasvg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path fill = "#fff" fill-opacity="1" 
+              d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,122.7C672,117,768,139,864,160C960,181,1056,203,1152,186.7C1248,171,1344,117,1392,90.7L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
+            </path>
+          </svg>
+        </div>
+        <div id="oquefazemos">
+          
+          <div class="nocturne container align-self-center title-inner my-5 py-5">
+            
+            <div class="row flex-lg-row g-5">
+              <div class="col-lg-3 p-4 m-0">
+              <p class="pretitulo">O QUE FAZEMOS?</p>
+              <h2 class="titulo-left"> OFERECEMOS SERVIÇOS CRIATIVOS</h2>
+              <p class="subtitulo-left">Te ajudamos a impulsionar sua marca do zero (ou
+                do cinco). <br>Alcance clientes com recursos atuais através de
+                nossa consultoria online e completa.
+              </p>
+              </div>
+              <div class="col-lg-9 col-sm-12 col-12" style="margin: 0px !important;">
+                <div class="container">
+                  <div class="row">
+                    <div class="row ">
+                      <div class="col-lg-6 col-sm-12 d-flex align-items-start p-3 mb-6">
+                        <img src="img/inspiracao.png" class="imgservicos">
+                        <div class="pl-2">
+                          <h5 class="tituloservicos">ESTRATÉGIA</h5>
+                          <p class="descricaoservicos">Design criativo e inteligente não é o suficiente. 
+                            É preciso complementa-lo com estratégia e técnicas de alcance!
+                          </p>
+                          <!-- <a class="btn btn-reedmore fw-bold"><span><i class="bi bi-arrow-return-right"></i>Ver todos os benefícios!</span></a> -->
+                        </div>
+                      </div>
+                      <div class="col-lg-6 col-sm-12 d-flex align-items-start p-3 mb-6">
+                        <img src="img/codificacao.png" class="imgservicos">
+                        <div class="pl-2">
+                          <h5>DESENVOLVIMENTO</h5>
+                          <p class="descricaoservicos">Sites institucionais, lojas online e sistemas de Gestão de Negócios. 
+                            Oferecemos o pacote completo para que sua empresa decole.
+                          </p>
+                          <!-- <a class="btn btn-reedmore fw-bold"><span><i class="bi bi-arrow-return-right"></i>Ver todos os benefícios!</span></a> -->
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-lg-6 col-sm-12 d-flex align-items-start p-3 mb-6">
+                        <img src="img/vetor.png" class="imgservicos">
+                        <div class="pl-2">
+                          <h5>WEB DESING</h5>
+                          <p class="descricaoservicos">Criamos templates intuitivos, personalizados e exclusivos. 
+                            Manter sua Identidade Visual é nossa especialidade, assim como deixar sua marca ainda mais atrativa.
+                          </p>
+                          <!-- <a class="btn btn-reedmore fw-bold"><span><i class="bi bi-arrow-return-right"></i>Ver todos os benefícios!</span></a> -->
+                        </div>
+                      </div>
+                      <div class="col-lg-6 col-sm-12 d-flex align-items-start p-3 mb-6">
+                        <img src="img/lancamento.png" class="imgservicos">
+                        <div class="pl-2">
+                          <h5>MARKETING DIGITAL</h5>
+                          <p class="descricaoservicos">Te ajudamos a impulsionar sua marca do zero. 
+                            Alcance clientes com recursos atuais, consultoria online e profissional.
+                          </p>
+                          <!-- <a class="btn btn-reedmore fw-bold"><span><i class="bi bi-arrow-return-right"></i>Ver todos os benefícios!</span></a> -->
+                        </div>
+                      </div>
+                    </div>                           
+                  </div>
+                </div>              
+              </div>
+            </div>
+          </div>
+        </div>
+        
+
+        <section class="sectionprojetos textura container-fluid img-fluid cover py-lg-2 hcf-bp-center hcf-bs-cover">
+          <div class="nocturne">
+            <div class="container">
+              <div class="pt-5 my-5 py-5 text-center">
+                <h5 class="titulos">PROJETOS RECENTES</h5>
+                <ul>
+                  <li class="list active" data-filter="tudo"><i class="bi bi-star-fill"></i>
+                    TODOS
+                  </li>
+                  <li class="list" data-filter="design"><i class="bi bi-vector-pen"></i>
+                    DESIGN CRIATIVO
+                  </li>
+                  <li class="list" data-filter="dev"><i class="bi bi-code-slash"></i>
+                    DESENVOLVIMENTO
+                  </li>
+                  <li class="list" data-filter="anuncios"><i class="bi bi-rocket-takeoff-fill"></i>
+                    ANUNCIOS
+                  </li>
+                </ul>
+      
+      
+                <div class="projetos mt-5">
+                  <div class="projeto image" data-item="dev" style="background-image: url(img/7.jpeg);">
+                    <div class="gobody overlay">
+                      <div class="relative">
+                          <a class="plink" target="_blank" href="/"></a>
+                          <h1 class="ptitle">Campanha Doação de Sangue</h1>
+                          <p class="pauthor">R. Prates</p>
+                      </div>
+                      
+                    </div>
+                  </div>
+                  <div class="projeto image" data-item="dev" style="background-image: url(img/2.jpeg);">
+                    <div class="gobody overlay">
+                      <div class="relative">
+                          <a class="plink" target="_blank" href="/"></a>
+                          <h1 class="ptitle">Promoção de Produtos</h1>
+                          <p class="pauthor">R. Prates</p>
+                      </div>
+                      
+                    </div>
+                  </div>
+                  <div class="projeto image" data-item="design" style="background-image: url(img/8.jpeg);">
+                    <div class="gobody overlay">
+                      <div class="relative">
+                          <a class="plink" target="_blank" href="/"></a>
+                          <h1 class="ptitle">Campanha Dia das Mães</h1>
+                          <p class="pauthor">R. Prates</p>
+                      </div>
+                      
+                    </div>
+                  </div>
+                  <div class="projeto image" data-item="dev" style="background-image: url(img/11.jpeg);">
+                    <div class="gobody overlay">
+                      <div class="relative">
+                          <a class="plink" target="_blank" href="/"></a>
+                          <h1 class="ptitle">Promoção de Produtos</h1>
+                          <p class="pauthor">R. Prates</p>
+                      </div>
+                      
+                    </div>
+                  </div>
+                  <div class="projeto image" data-item="anuncios" style="background-image: url(img/4.jpeg);">
+                    <div class="gobody overlay">
+                      <div class="relative">
+                          <a class="plink" target="_blank" href="/"></a>
+                          <h1 class="ptitle">Campanha Responsabilidade no Transito</h1>
+                          <p class="pauthor">R. Prates</p>
+                      </div>
+                      
+                    </div>
+                  </div>
+                  <div class="projeto image" data-item="design" style="background-image: url(img/5.jpeg);">
+                    <div class="gobody overlay">
+                      <div class="relative">
+                          <a class="plink" target="_blank" href="/"></a>
+                          <h1 class="ptitle">Comemoração Semana Santa</h1>
+                          <p class="pauthor">R. Prates</p>
+                      </div>
+                      
+                    </div>
+                  </div>
+                  <div class="projeto image" data-item="anuncios" style="background-image: url(img/13.jpg);">
+                    <div class="gobody overlay">
+                      <div class="relative">
+                          <a class="plink" target="_blank" href="/"></a>
+                          <h1 class="ptitle">Dia de Tiradentes</h1>
+                          <p class="pauthor">R. Prates</p>
+                      </div>
+                      
+                    </div>
+                  </div>
+                  <div class="projeto image" data-item="design" style="background-image: url(img/12.jpg);">
+                    <div class="gobody overlay">
+                      <div class="relative">
+                          <a class="plink" target="_blank" href="/"></a>
+                          <h1 class="ptitle">Semana Santa</h1>
+                          <p class="pauthor">R. Prates</p>
+                      </div>
+                      
+                    </div>
+                  </div>
+                  <div class="projeto image" data-item="anuncios" style="background-image: url(img/3.jpeg);">
+                    <div class="gobody overlay">
+                      <div class="relative">
+                          <a class="plink" target="_blank" href="/"></a>
+                          <h1 class="ptitle">Promoção de Produtos</h1>
+                          <p class="pauthor">R. Prates</p>
+                      </div>
+                      
+                    </div>
+                  </div>
+                  <div class="projeto image" data-item="dev" style="background-image: url(img/1.jpeg);">
+                    <div class="gobody overlay">
+                      <div class="relative">
+                          <a class="plink" target="_blank" href="/"></a>
+                          <h1 class="ptitle">Campanha Contra a Discriminação Racial</h1>
+                          <p class="pauthor">R. Prates</p>
+                      </div>
+                      
+                    </div>
+                  </div>
+                  <div class="projeto image" data-item="anuncios" style="background-image: url(img/6.jpeg);">
+                    <div class="gobody overlay">
+                      <div class="relative">
+                          <a class="plink" target="_blank" href="/"></a>
+                          <h1 class="ptitle">Descobrimento do Brasil</h1>
+                          <p class="pauthor">R. Prates</p>
+                      </div>
+                      
+                    </div>
+                  </div>
+                  <div class="projeto image" data-item="design" style="background-image: url(img/9.jpeg);">
+                    <div class="gobody overlay">
+                      <div class="relative">
+                          <a class="plink" target="_blank" href="/"></a>
+                          <h1 class="ptitle">Campanha Mês dos Namorados</h1>
+                          <p class="pauthor">R. Prates</p>
+                      </div>
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>            
+          </div>
+          
+        </section>
+
+        <!-- <div id="portfolio" class= "textura container-fluid img-fluid cover py-lg-2 hcf-bp-center hcf-bs-cover">
+          <section class="nocturne">
+            <div class="container text-center ">
+              <div class="px-4 pt-5 my-5 py-5 text-center">
+                <h5 class="titulos">PROJETOS RECENTES</h5>          
+
+                <button type="button" class="active btn btn-projetos">TODOS</button>
+                <button type="button" class="btn btn-projetos">DESIGN CRIATIVO</button>
+                <button type="button" class="btn btn-projetos">DESENVOLVIMENTO</button>
+                <button type="button" class="btn btn-projetos">ANUNCIOS</button>
+                
+                <div class=" my-5">
+                  <div class="flex portfolio-items">
+                    
+                    <div class="img-port efeito-card4 portfolio-item criativos" style="background-image: url(img/4.jpeg);">
+                      <div class="overlay portfolio-item-inner text-justify">
+                        <h5>Projeto 1</h5>
+                        <p>Autor</p>
+                      </div>
+                    </div>
+                    <div class="img-port efeito-card5 portfolio-item criativos" style="background-image: url(img/8.jpeg);">
+                      <div class="overlay portfolio-item-inner text-justify">
+                        <h5>Projeto 1</h5>
+                        <p>Autor</p>
+                      </div>
+                    </div>
+                    <div class="img-port efeito-card6 portfolio-item devs" style="background-image: url(img/5.jpeg);">
+                      <div class="overlay portfolio-item-inner text-justify">
+                        <h5>Projeto 1</h5>
+                        <p>Autor</p>
+                      </div>
+                    </div>
+                    <div class="img-port efeito-card7 portfolio-item anuncios" style="background-image: url(img/7.jpeg);">
+                      <div class="overlay portfolio-item-inner text-justify">
+                        <h5>Projeto 1</h5>
+                        <p>Autor</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>                                
+              </div>
+            </div>
+          </section>       
+        </div> -->
+    
+
+        <section id="planoseprecos" class="container-fluid planosbk img-fluid cover py-lg-10 hcf-bp-center hcf-bs-cover">
+          <div class="container">
+            <div class="pt-5 my-5 py-5 text-center">
+              <div class="sectionplanos mt-5">
+                <div class="contplanos">
+                  <div class="infoplanos efeito-card1 col-lg-3 col-md-12 col-sm-12 mb-5">           
+                    <p class="pretitulo-ligth">PLANOS E PREÇOS</p>
+                    <h5 class="oferecemosservicos">OFERECEMOS PLANOS ACESSIVEIS E FLEXÍVEIS.</h5>
+                    <p style="color: #fff;">Para um plano personalizado, fale conosco através do <span style="font-weight: bold;">link:</span></p>
+                    <a rel="noopener noreferrer" href="https://api.whatsapp.com/send/?phone=5538997442456&text=Olá! Gostaria de um plano personalizado&type=phone_number&app_absent=0" target="_blank">
+                      <button class="btnpersona btn-highligth btn" style="width: 250px;">ENTRAR EM CONTATO</button>
+                    </a>
+                  </div>
+
+                  <div class="plano cardplanos efeito-card2">
+                    <div class="card-header headplanos">
+                      <h3 class="nomeplanos">Básico</h3>
+                      <p class="precoplanos">R$ 349,90</p>
+                      <p class="tipoplanos">mensalidade</p>
+                    </div>
+                    <div class="card-body contentplanos">
+                      <p>Conteúdo do Card 1. Este é o primeiro parágrafo.</p>
+                      <p>Este é o segundo parágrafo do Card 1.</p>
+                      <p>Terceiro parágrafo do Card 1.</p>
+                      <p>Conteúdo do Card 1. Este é o primeiro parágrafo.</p>
+                      <p>Este é o segundo parágrafo do Card 1.</p>                      
+                      <p>Ultimo</p>
+                      <p>Conteúdo do Card 1. Este é o primeiro parágrafo.</p>
+                      <p>Este é o segundo parágrafo do Card 1.</p>                      
+                      <p>Ultimo</p>
+                    </div>
+                    <div class="rodapeplanos">
+                      <div class="button-group">
+                        <button class="read-more">Ver mais</button>
+                        <a rel="noopener noreferrer" href="https://api.whatsapp.com/send/?phone=5538997442456&text=Olá! Tenho interesse no Plano Básico, pode me falar mais sobre ele?&type=phone_number&app_absent=0" target="_blank">
+                          <button class="other-button">Contratar</button>
+                        </a>
+                      </div>
+                    </div>
+                    <!-- <button class="button-rodape text-center">Contratar</button> -->
+                    
+                  </div>
+
+                  <div class="plano cardplanos efeito-card3">
+                    <div class="card-header headplanos">
+                      <h3 class="nomeplanos">Intermediário</h3>
+                      <p class="precoplanos">R$ 659,90</p>
+                      <p class="tipoplanos">mensalidade</p>
+                    </div>
+                    <div class="card-body contentplanos">
+                      <p>Conteúdo do Card 1. Este é o primeiro parágrafo.</p>
+                      <p>Este é o segundo parágrafo do Card 1.</p>
+                      <p>Terceiro parágrafo do Card 1.</p>
+                      <p>Conteúdo do Card 1. Este é o primeiro parágrafo.</p>
+                      <p>Este é o segundo parágrafo do Card 1.</p>
+                      <p>Terceiro parágrafo do Card 1.</p>
+                      <p>Conteúdo do Card 1. Este é o primeiro parágrafo.</p>
+                      <p>Este é o segundo parágrafo do Card 1.</p>
+                      <p>Ultimo</p>
+                    </div>                      
+                    <div class="rodapeplanos">
+                      <div class="button-group">
+                        <button class="read-more">Ver mais</button>
+                        <a rel="noopener noreferrer" href="https://api.whatsapp.com/send/?phone=5538997442456&text=Olá! Tenho interesse no Plano Intermediário, pode me falar mais sobre ele?&type=phone_number&app_absent=0" target="_blank">
+                          <button class="other-button">Contratar</button>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="plano cardplanos efeito-card4">
+                    <div class="card-header headplanos">
+                      <h3 class="nomeplanos">Completo</h3>
+                      <p class="precoplanos">R$ 1.299,90</p>
+                      <p class="tipoplanos">mensalidade</p>
+                    </div>
+                    <div class="card-body contentplanos">
+                      <p>Conteúdo do Card 1. Este é o primeiro parágrafo.</p>
+                      <p>Este é o segundo parágrafo do Card 1.</p>
+                      <p>Terceiro parágrafo do Card 1.</p>
+                      <p>Conteúdo do Card 1. Este é o primeiro parágrafo.</p>
+                      <p>Este é o segundo parágrafo do Card 1.</p>
+                      <p>Terceiro parágrafo do Card 1.</p>
+                      <p>Conteúdo do Card 1. Este é o primeiro parágrafo.</p>
+                      <p>Este é o segundo parágrafo do Card 1.</p>
+                      <p>Ultimo</p>
+                    </div>                      
+                    <div class="rodapeplanos">
+                      <div class="button-group">
+                        <button class="read-more">Ver mais</button>
+                        <a rel="noopener noreferrer" href="https://api.whatsapp.com/send/?phone=5538997442456&text=Olá! Tenho interesse no Plano Completo, pode me falar mais sobre ele?&type=phone_number&app_absent=0">
+                          <button class="other-button">Contratar</button>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- <div class="cont-planos">
+            <div class="plano-teste">
+              <h2>Título do Card 1</h2>
+              <p class="content">Conteúdo do Card 1. <span class="more">Mais informações sobre o Card 1.</span></p>
+              <button class="read-more">Ver todos os benefícios</button>
+            </div>
+            
+            <div class="plano-teste">
+              <h2>Título do Card 2</h2>
+              <p class="content">Conteúdo do Card 2. <span class="more">Mais informações sobre o Card 2.</span></p>
+              <button class="read-more">Ver todos os benefícios</button>
+            </div>
+            
+            <div class="plano-teste">
+              <h2>Título do Card 3</h2>
+              <div class="content">
+                <p>Beneficio.</p>
+                <p>Beneficio.</p>    
+                <p>Beneficio.</p>    
+                <p>Beneficio.</p>    
+                <p>Beneficio.</p>
+              </div>
+              
+              <button class="read-more">Ver todos os benefícios</button>
+            </div>
+          </div> -->
+          
+          
+          <!-- <div class="container">
+            <div class="pt-5 my-5 py-5 text-center">
+              <div class="sectionplanos mt-5">
+                <div style="color: #fff; width: 250px; margin-left: -50px; text-align: left; ">           
+                  <p >PLANOS E PREÇOS</p>
+                  <h2 >OFERECEMOS PLANOS ACESSIVEIS E FLEXÍVEIS.</h2>
+                  <p>Para um plano personalizado, fale conosco através do link:</p>
+                  <button type="button" class="btnpersona btn-highligth btn">ENTRAR EM CONTATO</button>
+                </div>
+                <div class="plano ">                
+                  <div class="card-header">
+                    <h3 class="nomeplanos">Plano 1</h3>
+                    <p class="precoplanos">preco</p>
+                    <p class="tipoplanos">tipo</p>
+                  </div>
+                  <div class="card-body conteudoplanos">
+                    <p>Beneficio.</p>
+                    <p>Beneficio.</p>    
+                    <p>Beneficio.</p>    
+                    <p>Beneficio.</p>    
+                    <p>Beneficio.</p>    
+                    <p>Beneficio.<i class="bi bi-question-circle"></i></p>    
+                    <p>Beneficio.<i class="bi bi-question-circle"></i></p>    
+                    <p>Beneficio.<i class="bi bi-question-circle"></i></p>    
+                    <p>Beneficio.</p>    
+                    <p>Beneficio.</p>    
+                    <p>Beneficio.</p>    
+                    <p>Beneficio.</p>                            
+                  </div>                                    
+                  <div class="card-footer text-center rodapeplanos">                      
+                    <button type="button" id="lermais">Ver todos os beneficios</button>
+                  </div>                  
+                </div>
+                <div class="plano ">                
+                  <div class="card-header">
+                    <h3 class="nomeplanos">Plano 2</h3>
+                    <p class="precoplanos">preco</p>
+                    <p class="tipoplanos">tipo</p>
+                  </div>
+                  <div class="card-body conteudoplanos">
+                    <p>Beneficio.</p>
+                    <p>Beneficio.</p>    
+                    <p>Beneficio.</p>    
+                    <p>Beneficio.</p>    
+                    <p>Beneficio.</p>    
+                    <p>Beneficio.<i class="bi bi-question-circle"></i></p>    
+                    <p>Beneficio.<i class="bi bi-question-circle"></i></p>    
+                    <p>Beneficio.<i class="bi bi-question-circle"></i></p>    
+                    <p>Beneficio.</p>    
+                    <p>Beneficio.</p>    
+                    <p>Beneficio.</p>    
+                    <p>Beneficio.</p>                            
+                  </div>                                    
+                  <div class="card-footer text-center rodapeplanos">                      
+                    <button type="button" id="lermais">Ver todos os beneficios</button>
+                  </div>                  
+                </div>
+                <div class="plano ">                
+                  <div class="card-header">
+                    <h3 class="nomeplanos">Plano 3</h3>
+                    <p class="precoplanos">preco</p>
+                    <p class="tipoplanos">tipo</p>
+                  </div>
+                  <div class="card-title">
+                    <div class="card-body conteudoplanos">
+                      <p>Beneficio.</p>
+                      <p>Beneficio.</p>    
+                      <p>Beneficio.</p>    
+                      <p>Beneficio.</p>    
+                      <p>Beneficio.</p>    
+                      <p>Beneficio.</p>    
+                      <p>Beneficio.</p>    
+                      <p>Beneficio.</p>    
+                      <p>Beneficio.</p>    
+                      <p>Beneficio.</p>    
+                      <p>Beneficio.<i class="bi bi-question-circle"></i></p>    
+                      <p>Beneficio.<i class="bi bi-question-circle"></i></p>       
+                    </div>
+                    <div class="card-footer text-center rodapeplanos">                      
+                      <button type="button" id="lermais">Ver todos os beneficios</button>
+                    </div>
+                  </div>                  
+                </div>
+              </div>
+            </div>
+          </div> -->
+        </section>
+
+        <!-- <section id="Planos e Preços" class="container-fluid planosbk img-fluid cover py-lg-10 hcf-bp-center hcf-bs-cover">
+          <div class="container pt-5">
+            <div class="row">
+              
+              <div class="col-lg-3 col-md-12 col-sm-12 mb-5 mr-3" id="explicativoplanos" style="margin-left: -80px;">           
+                <p class="pretitulo-ligth">PLANOS E PREÇOS</p>
+                <h5 class="oferecemosservicos">OFERECEMOS PLANOS ACESSIVEIS E FLEXÍVEIS.</h5>
+                <p>Para um plano personalizado, fale conosco através do link:</p>
+                <button type="button" class="btnpersona btn-highligth btn">ENTRAR EM CONTATO</button>
+              </div>
+              
+              <div class="sectionplanos col-lg-9">
+                
+            
+              <div class="plano col-lg-3">
+                <div class="card-planos card h-100 p-2">
+                  <div class="card-header text-center cabecalhosplanos">
+                    <h3 class="nomeplanos">Básico</h3>
+                    <p class="precoplanos">R$350,00</p>
+                    <p class="tipoplanos">mensalidade</p>
+                  </div>
+                  <div class="card-body conteudoplanos">
+                    <p>Gerenciamento completo das redes sociais. <i class="bi bi-question-circle"></i></p>
+                    <p>Criação de conteúdo.</p>
+                    <p>Social media.</p>
+                    <p>1 anúncio mensal.</p>
+                    <p>Reuniões mensais.</p>                      
+                    <p>Reuniões mensais.</p>                      
+                    <p>Reuniões mensais.</p>                      
+                    <p>Reuniões mensais.</p>                      
+                    <p>Reuniões mensais.</p>                      
+                    <p>Reuniões mensais.</p>                      
+                    <p>Reuniões mensais.</p>                      
+                    <p>Reuniões mensais.</p>                      
+                    <p>Reuniões mensais.</p>                      
+                    <p>Reuniões mensais.</p>                      
+                    <p>Reuniões mensais.</p>                      
+                    <p>Reuniões mensais.</p>                      
+                  </div>
+                  <div class="align-items-center card-footer text-center rodapeplanos">
+                    <a>Ver todos os beneficios</a>
+                  </div>
+                </div>
+              </div>
+          
+              <div class="plano col-lg-3">
+                <div class="card-planos card h-100 p-2">
+                  <div class="card-header text-center cabecalhosplanos">
+                    <h3 class="nomeplanos">Intermediário</h3>
+                    <p class="precoplanos">R$650,00</p>
+                    <p class="tipoplanos">mensalidade</p>
+                  </div>
+                  <div class="card-body conteudoplanos">
+                    <p>Planejamento mensal de conteúdo. <i class="bi bi-question-circle"></i></p>
+                    <p>Manutenção do Google Empresas.</p>
+                    <p>Campanhas de marketing. <i class="bi bi-question-circle"></i></p>
+                    <p>1 anúncio mensal (Facebook e Instagram). <i class="bi bi-question-circle"></i></p>                    
+                    <p>1 anúncio mensal (Facebook e Instagram). <i class="bi bi-question-circle"></i></p>                    
+                    <p>1 anúncio mensal (Facebook e Instagram). <i class="bi bi-question-circle"></i></p>                    
+                    <p>1 anúncio mensal (Facebook e Instagram). <i class="bi bi-question-circle"></i></p>                    
+                    <p>1 anúncio mensal (Facebook e Instagram). <i class="bi bi-question-circle"></i></p>                    
+                    <p>1 anúncio mensal (Facebook e Instagram). <i class="bi bi-question-circle"></i></p>                    
+                  </div>
+                  <div class="align-items-center card-footer text-center rodapeplanos">
+                    <a>Ver todos os beneficios</a>
+                  </div>
+                </div>
+              </div>
+        
+              <div class="plano col-lg-3">
+                <div class="card-planos card h-100 p-2">
+                  <div class="card-header text-center cabecalhosplanos">
+                    <h3 class="nomeplanos">Completo</h3>
+                    <p class="precoplanos">R$1,200,00</p>
+                    <p class="tipoplanos">mensalidade</p>
+                  </div>
+                  <div class="card-body conteudoplanos">
+                    <p>1 Site. <i class="bi bi-question-circle"></i></p>
+                    <p>Implementação e Treinamento.</p>
+                    <p>Criação de anúncios (todas as redes sociais e Google ADS).</p>
+                    <p>Vinculação dos perfis da empresa. <i class="bi bi-question-circle"></i></p>                      
+                    <p>Vinculação dos perfis da empresa. <i class="bi bi-question-circle"></i></p>                      
+                    <p>Vinculação dos perfis da empresa. <i class="bi bi-question-circle"></i></p>                      
+                    <p>Vinculação dos perfis da empresa. <i class="bi bi-question-circle"></i></p>                      
+                    <p>Vinculação dos perfis da empresa. <i class="bi bi-question-circle"></i></p>                      
+                    <p>Vinculação dos perfis da empresa. <i class="bi bi-question-circle"></i></p>                      
+                  </div>
+                  <div class="align-items-center card-footer text-center rodapeplanos">
+                    <a>Ver todos os beneficios</a>
+                  </div>
+                </div>
+              </div> 
+              </div>           
+            </div>         
+          </div>
+        </section>            -->
+
+        <div class="espaco-vertical"></div>
+
+        <div class="container-fluid">
+          <div id="Quem somos" class="container">
+            <div class="row container nocturne my-5 p-5">
+              <h2 class="titulos text-justify mb-5">FUNDADORES</h2>
+          
+              
+              <div class="pr-2 mb-4 col-lg-6 esquerda-direita">
+                <div class="row g-0 align-items-center">
+                  <div class="col-md-6 col-sm-6">
+                    <img src="img/quemsomosrodrigo5.png" class="rounded-2 quemsomosimg" alt="...">
+                  </div>
+                  <div class="col-md-6 col-sm-6">
+                    <div class="card-body">
+                      <h5 class="card-title">Rodrigo Prates</h5>
+                      <p>Designer Gráfico</p>
+                      <p >This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="pr-2 mb-4 col-lg-6 esquerda-direita">
+                <div class="row g-0 align-items-center">
+                  <div class="col-md-6 col-sm-6">
+                    <img src="img/quemsomosemily.png" class=" rounded-2 quemsomosimg" alt="...">
+                  </div>
+                  <div class="col-md-6 col-sm-6">
+                    <div class="card-body text-justify text-lg-start mb-2">
+                      <h5 class="card-title">Êmily Sousa</h5>
+                      <p>Programadora</p>
+                      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div> 
+          </div>
+        </div>
+           
+        <div class="container-fluid contfaleconosco  hcf-bp-center hcf-bs-cover">
+          <div class="container col-xl-10 col-xxl-8 px-4 py-5">
+            <div class="row flex-lg-row-reverse align-items-center g-lg-2 py-5 nocturne">
+              <!-- <div class="col-lg-6">
+                <div class="slider-thumb"></div>
+              </div> -->
+             
+
+              <div class="col-md-10 mx-auto col-lg-4" >
+                <form rel="noopener noreferrer" action="https://formsubmit.co/incepfaleconosco@gmail.com" method="POST" class="formulario-email p-4 p-md-5 rounded-3">
+                  <h1>FALE CONOSCO</h1>
+                  <p>Nos envie uma solicitação de contato que te retornamos no mesmo dia.</p>
+                  <div class="form-floating mb-3 fall-email">
+                    <input type="email" name="email" id="email" class="form-control" required placeholder="Insira seu email">
+                    <label for="floatingInput">Email para contato</label>
+                  </div>
+                  <div class="form-floating mb-3 fall-name">
+                    <input type="text" name="name" id="name" class="form-control" required placeholder="Seu nome">
+                    <label for="floatingInput">Seu Nome</label>
+                  </div>
+                  <div class="form-floating mb-3 fall-mensagem">
+                    <textarea name="message" class="form-control"  rows="10" required placeholder="Em que podemos te ajudar?"></textarea>
+                    <label for="floatingInput" id="message">Mensagem</label>
+                  </div>
+
+                  <input type="hidden" name="_subject" value="Solicitação de Contato!">
+                  <input type="hidden" name="_captcha" value="false">
+                  <input type="text" name="_honey" style="display:none">
+                  <input type="hidden" name="_next" value="http://127.0.0.1:5500/obrigado.html">
+
+                  <button class="w-100 btn btn-lg btnpersona btn-pdark btn fall-env" type="submit">Enviar</button>
+                  
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="espaco-vertical"></div>
+
+        <section id="Galeria" class="container my-5 direita-esquerda col-xxl-8" >
+          <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+            <div class="col-sm-12 col-md-12 col-lg-3  mb-6" >
+              <p class="pretitulo">ANTES DE IR...</p>
+              <h2 class="titulo">CONHEÇA NOSSA GALERIA</h2>
+              <p class="subtitulos" style="max-width: 280px;">Reservamos um espaço especial para nossas artes criativas mais recentes.</p>
+              <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                <a href="galeria.html">
+                  <button type="button" class="btnpersona btn-yellow btn " style="width: 270px;">VER</button>
+                </a>
+              </div>
+            </div>
+            <div class="col-lg-9 col-sm-12 col-md-12 mx-auto">
+              <div class="rowpersona" >
+                <div class="column" id="row-galeria">
+                  <img id="uni-galeria" src="img/1.jpeg" class="cardsgaleria">
+                  <img src="img/2.jpeg" class="cardsgaleria">
+                  <img src="img/3.jpeg" class="cardsgaleriavari">                    
+                </div>
+                <div class="column custom-offset" id="row-galeria">
+                  <img src="img/3.jpeg" class="cardsgaleria">
+                  <img src="img/4.jpeg" class="cardsgaleriavari">
+                  <img src="img/6.jpeg" class="cardsgaleria">                    
+                </div>
+                <div class="column" id="row-galeria">
+                  <img src="img/7.jpeg" class="cardsgaleria">
+                  <img src="img/8.jpeg" class="cardsgaleriavari">
+                  <img src="img/9.jpeg" class="cardsgaleria">
+                </div>
+                <div class="column custom-offset" id="row-galeria">
+                  <img src="img/11.jpeg" class="cardsgaleria">
+                  <img src="img/12.jpg" class="cardsgaleriavari">
+                  <img src="img/13.jpg" class="cardsgaleria">
+                </div>
+                <div class="column" id="row-galeria">
+                  <img src="img/4.jpeg" class="cardsgaleriavari">
+                  <img src="img/2.jpeg" class="cardsgaleria">
+                  <img src="img/5.jpeg" class="cardsgaleria">
+                </div>
+              </div>  
+
+            </div>
+          </div>
+        </section>   
+        
+      </main>
+      
+      <div id="Rodapé" class="container-fluid rodapestyle">
+        <div class="fixos fixed-bottom mr-4">
+          <div class="mb-3">
+            <a href='#topo'>
+              <button type="button" class="btn btn-light voltar-topo">                
+                <h5><i class="bi bi-chevron-double-up"></i></h5>
+              </button>
+            </a>
+          </div>
+
+          <!-- Botão modo escuro/dark -->
+
+          <!-- <div class="trilho mb-4" id="trilho">
+            <div class="indicador">                
+            </div> 
+            <div class="iconcont">
+              <h5>
+                <i class="bi bi-sun-fill sol"></i>
+                <i class="bi bi-moon-fill lua"></i>
+              </h5>
+            </div>
+          </div> -->
+        </div>
+        <footer class="pt-5">
+          <div class="row py-6 border-top">
+            <div class="container mx-4 col-lg-2 col-md-12 my-3 pl-5" style="align-items: center !important; justify-content: center;">              
+              <img src="img/incept-ligth.png" style="width: 50px;" class="img-fluid">
+            </div>
+      
+            <div class="col-lg-2 col-md-3 col-sm-3 my-3 pl-5">
+              <h5>INICIO</h5>
+              <ul class="nav flex-column my-3">
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Sobre nós</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Serviços</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Portifólio</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Orçamentos</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Prazos e preços</a></li>
+              </ul>
+            </div>
+      
+            <div class="col-lg-2 col-md-3 col-sm-3 my-3 pl-5">
+              <h5>DESENVOLVIMENTO</h5>
+              <ul class="nav flex-column my-3">
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">E-commerces</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Intitucionais</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Templates</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Direitos Autorais</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Metodologia</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Implementação</a></li>
+              </ul>
+            </div>
+
+            <div class="col-lg-2 col-md-3 col-sm-3 my-3 pl-5">
+              <h5>AJUDA</h5>
+              <ul class="nav flex-column my-3">
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Fale conosco</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Reportar erro</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Feedback</a></li>
+              </ul>
+            </div>
+
+            <div class="col-lg-3 col-md-2 col-sm-3 my-3 pl-5">
+              <h5>CANAIS DE ATENDIMENTO</h5>
+              <ul class="nav flex-column my-3 ">
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted"><span><i class="bi bi-envelope"></i>inceptfaleconosco@gmail.com</span></a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted"><span><i class="bi bi-telephone"></i>(38) 99860-4242</span></a></li>               
+              </ul>
+              <h5 class="mt-5">NOS ENCONTRE AQUI</h5>
+              <ul class="list-unstyled d-flex my-3">
+                <li class="">
+                  <a href="https://www.instagram.com/incep.design/">
+                    <h2><i class="bi bi-instagram"></i></h2>
+                  </a>
+                </li>
+                <li class=""><a href="#">
+                  <h2><i class="bi bi-facebook"></i></h2>
+                </a>
+                </li>
+                <li class=""><a href="https://api.whatsapp.com/send/?phone=5538997442456&text&type=phone_number&app_absent=0">
+                  <h2><i class="bi bi-whatsapp"></i></h2>
+                </a>
+                </li>
+              </ul>
+            </div>
+            
+          </div>
+          
+          <div class="text-center border-top pb-3">
+            <p class="mt-4"><span class="incept">@2023 INCEPT DESIGN </span> <span class="direitosreservados">| TODOS OS DIREITOS RESERVADOS.</span> </p>
+          </div>
+          
+        </footer>
+      </div>
+
+    <!-- JavaScript (Opcional) -->
+    <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+    <!-- JS PErsolalizado -->
+    <script defer src="index.js"></script>
+    
+
+    <!-- Jquery 5.2 -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+    <!-- Masony -->
+    <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous" async></script>
+
+    <!-- Scroll Reveal -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+
+  </body>
+
+</html>

@@ -1,0 +1,181 @@
+$pixels: 160;
+$size: $pixels*1px;
+$easing: cubic-bezier(0.455, 0.03, 0.515, 0.955); //easeInOutQuad
+$anim-1: anim-1 5s $easing alternate infinite;
+$anim-2: anim-2 .2s linear infinite; // spin
+$transition-pixel: width 200ms, height 200ms, top 200ms, left 200ms;
+
+@mixin bg($color: 0) {
+  background: linear-gradient(
+    90deg,
+    hsla($color, 50%, 50%, 1) 0%,
+    hsla($color, 50%, 50%, 1) 25%,
+    hsla($color+60, 50%, 50%, 1) 25%,
+    hsla($color+60, 50%, 50%, 1) 75%,
+    hsla($color+120, 50%, 50%, 1) 75%    
+  );
+}
+@mixin bg2($color: 0) {
+  background: linear-gradient(
+    90deg,
+    #777 0%,
+    #666 25%,
+    #ccc 25%,
+    #ddd 75%,
+    #777 75%
+  );
+}
+
+
+
+.scene {
+  -webkit-tap-highlight-color: rgba(black, 0);
+  position: absolute;
+  width: $size;
+  height: $size;
+  top: calc(50% - #{$size/2});
+  left: calc(50% - #{$size/2});
+  transform-style: preserve-3d;
+  //outline: 1px solid orange; // debug
+  transform: translateY(#{.5*$size/2})
+    rotateY(0deg)
+    rotateX(60deg)
+    rotateZ(0deg);
+  animation: scene 10s $easing infinite;
+}
+
+.rotate {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: $size;
+  height: $size;
+  transform-style: preserve-3d;
+  animation: $anim-1;
+  will-change: transform;
+  //outline: 1px solid green; // debug
+  background-color: blueviolet;
+}
+
+.rotate-2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: $size;
+  height: $size;
+  transform-style: preserve-3d;
+  animation: $anim-2;
+  will-change: transform;
+  background-color: blueviolet;
+
+  // outline: 1px solid red; // debug
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    $size: 10%;
+    top: (100% - $size) / 2;
+    left: (100% - $size) / 2;
+    width: $size;
+    height: $size;
+    background: rgba(#000, .2);
+    border-radius: 50%;
+  }
+}
+
+.figure {
+  position: absolute;
+  width: $size;
+  height: $size;
+  top: 0;
+  left: 0;
+  transform-style: preserve-3d;
+  background-color: blueviolet;
+
+
+  > div {
+    transform-style: preserve-3d;
+    position: absolute;
+    $size: 10%;
+    top: (100% - $size)/2;
+    left: (100% - $size)/2;
+    width: 10%;
+    height: 10%;
+    border-radius: 50%;
+    transition: $transition-pixel;
+    background-color: blueviolet !important;
+
+  }
+
+  $offset: 100;
+  $step: 20;
+
+  @for $i from 1 through $pixels/10 {
+    $j: ($i - 1) * 10;
+    > :nth-child(n + #{$j + 1}):nth-child(-n + #{$j + 10}) {
+      @include bg($j+$step + $offset);
+    }
+  }
+
+  &.is-toggled {
+    @for $i from 1 through $pixels/10 {
+      $j: ($i - 1) * 10;
+      > :nth-child(n + #{$j + 1}):nth-child(-n + #{$j + 10}) {
+        @include bg2($j+$step + $offset);
+      }
+    }
+  }
+
+  @for $i from 1 through $pixels {
+    > :nth-of-type(#{$i}) {
+      transform: translateZ($i*1px);
+      $val: floor($i * .1);
+      @if ($i % 20==1) {
+        background: rgba(black,.3) !important;
+      }
+    }
+  }
+}
+
+.shadow {
+  position: absolute;
+  $size: 40%;
+  top: (100% - $size) / 2;
+  left: (100% - $size) / 2;
+  width: $size;
+  height: $size;
+  background: rgba(#111, .5);
+  box-shadow: 0 0 10px #111;
+  border-radius: 50%;
+}
+
+@keyframes anim-1 {
+  $y: 6deg;
+  0% {
+    transform: rotateZ(0deg) rotateY(#{-$y});
+  }
+  100% {
+    transform: rotateZ(0deg) rotateY(#{$y});
+  }
+}
+@keyframes anim-2 {
+  $y: 0deg;
+  0% {
+    transform: rotateZ(0deg) rotateY(#{$y});
+  }
+  100% {
+    transform: rotateZ(360deg) rotateY(#{$y});
+  }
+}
+
+@keyframes scene {
+  $x: 60deg;
+  $x2: 30deg;
+  $move: 50px;
+  0%, 100% {
+    transform: translateX($move) translateY(#{.5*$size/2}) rotateX($x) rotateZ(0);
+  }
+  50% {
+    transform: translateX(-$move) translateY(#{.5*$size/2}) rotateX($x2) rotateZ(360deg);
+  }
+}
