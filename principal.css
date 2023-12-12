@@ -266,6 +266,11 @@ body.dark-mode p,a,i,span{
 
 /* Classes Globais Personalizadas */
 
+span {
+  /* color: #FDB724; */
+  font-weight: bold;
+}
+
 .titulos {
   /* color: #1E1E1E; */
   text-align: center;
@@ -287,11 +292,7 @@ body.dark-mode p,a,i,span{
 
 .titulo-left {
   text-align: left !important;
-  
-  /* color: #1E1E1E; */
-  /* text-align: center; */
   font-family: "Montserrat";
-  /* font-size: 40px; */
   font-style: normal;
   font-weight: 500;
   line-height: normal;
@@ -841,7 +842,7 @@ nav.rolagem .btn-abrir-menu{
 
 /* Tela Inicial */
 #Incio section {
-  height: 90vh !important;
+  height: 100vh !important;
 }
 
 div .ondas {
@@ -857,11 +858,11 @@ div .ondas {
 
 @keyframes ondaAnimada { /*Move as ondas para cima e para baixo*/
   0% {
-    transform: translateY(-180px);
+    transform: translateY(-80px);
   }
 
   100% {
-    transform: translateY(-200px);
+    transform: translateY(-100px);
   }
 }
 
@@ -1107,7 +1108,7 @@ div .ondas {
 .seta {
   position: relative;
   stroke: #000;
-  width: min(15px, 4vw) !important;
+  width: min(15px, 3.5vw) !important;
   bottom: 0;
   position: relative;
   height: auto !important;
@@ -1854,7 +1855,7 @@ section.portifolio .flex {
   display: block;
   flex-direction: column;
   width: calc(25% - 20px);
-  min-width: 230px;
+  min-width: 190px;
   transition: all 0.4s;
 }
 
@@ -1865,7 +1866,7 @@ section.portifolio .flex {
 
 .contentplanos {
   overflow: hidden;
-  max-height: 230px; /* Altura inicial do conteúdo */
+  max-height: 190px; /* Altura inicial do conteúdo */
   transition: max-height 0.4s ease; /* Transição suave ao expandir/retrair */
   padding: 10px;
   margin: 10px;
@@ -1928,6 +1929,7 @@ section.portifolio .flex {
   color: #fff;
   border: none;
   padding: 8px 16px;
+  margin: 0px 5px;
   border-radius: 4px;
   cursor: pointer;
   width: 250px;

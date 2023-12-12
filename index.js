@@ -250,7 +250,7 @@ $(document).ready(function() {
       $content.css('max-height', $content[0].scrollHeight + 'px');
       $(this).text('Ver menos');
     } else {
-      $content.css('max-height', '230px'); // Altura inicial do conteúdo
+      $content.css('max-height', '190px'); // Altura inicial do conteúdo
       $(this).text('Ver mais');
     }
   });
