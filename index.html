@@ -80,22 +80,26 @@
           </div> 
           <ul id="menu-menor">
             <li class="nav-item">
-              <a class="nav-link active"  href="#">Inicio</a>
+              <a class="nav-link active" href="index.html">Início</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" href="#">Portifolio</a>
+              <a class="nav-link active" href="#oquefazemos">Serviços</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active">Serviços</a>
+              <a class="nav-link active" href="#portifolio">Portifólio</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active">Quem somos</a>
+              <a class="nav-link active" href="#planoseprecos">Planos e Preços</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#quemsomos">Quem somos</a>
             </li>
             <li class="nav-item" id="contato">
-              <a class="nav-link">Contato</a>
+              <a class="nav-link"><i class="bi bi-caret-down-fill"></i>Contato</a>
               <ul id="drop-mobile">
-                <li href="https://api.whatsapp.com/send/?phone=5538998604242&text=&type=phone_number&app_absent=0">Whatsapp</li>
-                <li href="https://www.instagram.com/incep.design/">Instagram</li>
+                <li><a class="nav-link"href="https://www.instagram.com/incep.design/">Instagram</a></li>
+                  <li><a class="nav-link" href="https://api.whatsapp.com/send/?phone=5538998604242&text&type=phone_number&app_absent=0">Whatsapp</a></li>
+                  <li><a class="nav-link" href="#faleconosco">Fale Conosco</a></li>
               </ul>
             </li>
           </ul>
@@ -105,7 +109,7 @@
     
     <main>
       <!-- Inicio -->        
-      <section id="Inicio" class="herobk text-center img-fluid  py-lg-8 hcf-bp-center hcf-bs-cover hcf-overlay">          
+      <section id="Inicio" class="herobk text-center img-fluid hcf-bp-center hcf-bs-cover hcf-overlay">          
         <div class="ondas" id="topo">
           <div class="onda1" id="onda1"></div>
           <div class="onda4" id="onda2"></div>
@@ -113,25 +117,27 @@
           <div class="onda3" id="onda4"></div>
         </div>
         
-        <div class="si-container px-4 text-center vertical">
+        <div class="vertical">
           <div class="nocturne visit-card">
-            <h1 class="somos-incept my-4">Somos Incept </h1>
+            <h1 class="somos-incept">Somos Incept </h1>
             <div class="col-lg-4 mx-auto">
               <p class="txt-init">Criativa e socialmente consciente, 
                 somos especializados em design estratégico e empresarial.</p>
             </div>
             
-            <div class="deslize">
-              <p>DESLIZE</p>
-              <svg class="seta" xmlns="http://www.w3.org/2000/svg" width="16" height="152" viewBox="0 0 16 152" fill="none">
-                <g >
-                <circle cx="8.06769" cy="6.36603" r="4.51095" stroke="white" stroke-width="1.8"/>
-                  <g style="mix-blend-mode:difference">
-                  <path style="mix-blend-mode:difference;" d="M7.36028 150.85C7.7508 151.24 8.38397 151.24 8.77449 150.85L15.1385 144.486C15.529 144.095 15.529 143.462 15.1385 143.072C14.7479 142.681 14.1148 142.681 13.7242 143.072L8.06738 148.729L2.41053 143.072C2.02 142.681 1.38684 142.681 0.996315 143.072C0.605791 143.462 0.605791 144.095 0.996315 144.486L7.36028 150.85ZM7.06738 11.777L7.06738 150.143H9.06738L9.06738 11.777H7.06738Z" fill="white"/>
-                  </g>
+          </div>
+        </div>
+        <div class="deslizeposition">
+          <div class="deslizecont">
+            <p class="deslize">DESLIZE</p>
+            <svg class="seta" xmlns="http://www.w3.org/2000/svg" width="16" height="152" viewBox="0 0 16 152" fill="none">
+              <g >
+              <circle cx="8.06769" cy="6.36603" r="4.51095" stroke="white" stroke-width="1.8"/>
+                <g style="mix-blend-mode:difference">
+                <path style="mix-blend-mode:difference;" d="M7.36028 150.85C7.7508 151.24 8.38397 151.24 8.77449 150.85L15.1385 144.486C15.529 144.095 15.529 143.462 15.1385 143.072C14.7479 142.681 14.1148 142.681 13.7242 143.072L8.06738 148.729L2.41053 143.072C2.02 142.681 1.38684 142.681 0.996315 143.072C0.605791 143.462 0.605791 144.095 0.996315 144.486L7.36028 150.85ZM7.06738 11.777L7.06738 150.143H9.06738L9.06738 11.777H7.06738Z" fill="white"/>
                 </g>
-              </svg>
-            </div>
+              </g>
+            </svg>
           </div>
         </div>
       </section>
@@ -547,7 +553,7 @@
       <div class="espaco-vertical"></div>
 
       <!-- Galeria -->
-      <section id="galeria" class="container my-5 col-xxl-8" >
+      <section id="galeria" class="container my-5 col-xxl-8 pt-5 mt-5" style="align-items: center !important;">
         <div class="row nocturne flex-lg-row-reverse align-items-center g-5 py-5">
           <div class="col-sm-12 col-md-12 col-lg-4  mb-6" >
             <p class="pretitulo">ANTES DE IR...</p>
@@ -595,7 +601,7 @@
     
     <!-- Rodapé -->
     <div id="Rodapé" class="container-fluid rodapestyle">
-      <div class="fixos fixed-bottom col-1 mr-4">
+      <div class="fixos fixed-bottom mr-4">
         <div class="mb-5">
           <a href='#topo'>
             <button type="button" class="btn btn-light voltar-topo">                

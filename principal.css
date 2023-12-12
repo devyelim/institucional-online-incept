@@ -80,10 +80,9 @@ section {
 }
 
 .fixos {
+  position: absolute;
   display: flex;
   flex-direction: column;
-  bottom: 0;
-  right: 0;
   align-items: end;
 }
 
@@ -492,21 +491,21 @@ nav.menu-desktop ul li a {
 
 #contato a{
   /* height: 100%; */
-  background-color: #FFF;
-  color: #000 !important;
-  border-radius: 10px 10px 0px 10px;
+  background-color: #ffffff34;
+  color: #fff !important;
+  border-radius: 5px 5px 0px 0px;
 }
 
 #contato li{
   cursor: pointer;
   padding: 15px 20px !important;
-  transition: .4s;
+  transition: .3s;
 }
 
 #contato li:hover{
   cursor: pointer;
   padding: 15px 20px !important;
-  background-color: #1e1e1e72;
+  background-color: #1e1e1eb6;
   border-radius: 5px;
   width: 100%;
   color: #FFF;
@@ -516,14 +515,18 @@ nav.menu-desktop ul li a {
   display: block; /* Garante que o menu suspenso esteja visível */
   font-size: "Montserrat";
   font-size: 13px;
-  border-radius: 10px 0px 10px 10px;
   color: #FFF;
-  margin: 5px 20px;
+  margin: 0px 20px;
   padding: 10px 10px !important;
-  background-color: #ffffff1a;
+  background-color: #ffffff07;
   /* Outros estilos conforme desejado */
 }
 
+#drop-mobile a{
+  background-color: transparent;
+  padding: 0px;
+  font-size: 12px;
+}
 
 /* .dropdown-persona:hover .dropbtn {
   background-color: #3e8e41;
@@ -1047,25 +1050,25 @@ div .ondas {
 
 
 .vertical {
+  position: relative;
   margin: auto;
   height: 100vh;
   padding: 20px;
-  position: relative;
   transform: translateY(20%);
 }
 
 .somos-incept {
+  font-family: "aquus", sans-serif;
   font-size: min(70px, 18vw) !important;
+  font-style: normal;
+  text-align: center !important;
+  line-height: normal;
   background: linear-gradient(180deg, #FFF 56.25%, rgba(255, 255, 255, 0.00) 100%);
   background-clip: text;
+  mix-blend-mode: difference;
+  letter-spacing: min(30px, 3vw);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  mix-blend-mode: difference;
-  text-align: center !important;
-  font-family: "aquus", sans-serif;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: min(30px, 3vw);
 }
 
 .visit-card {
@@ -1079,41 +1082,46 @@ div .ondas {
 }
 
 .deslizeposition {
-  position: sticky;
-  margin-bottom: -30px !important;
+  position: absolute;
+  bottom: 0;
+  z-index: 99999;
+  transform: translateY(-100px);
 }
 
+.deslizecont{
+  position: relative;
+  align-items: center !important;
+  justify-content: center;
+}
+
+
 .deslize {
-  font-size: min(30px, 8vw) !important;
+  color: #d6d6d6;
   text-align: center;
   font-family: "aquus", sans-serif;
-  align-items: bottom !important;
+  font-size: min(30px, 8vw) !important;
   letter-spacing: 4px;
-  position: relative;
-  transform: translateY(70%);
-  /* animation: setaAnimada 0.8s ease-in-out infinite alternate !important; */
+  animation: setaAnimada 1.5s ease-in-out infinite alternate !important;
 }
 
 .seta {
   position: relative;
   stroke: #000;
-  width: min(17px, 4vw) !important;
+  width: min(15px, 4vw) !important;
   bottom: 0;
   position: relative;
   height: auto !important;
   animation: setaAnimada 1.5s ease-in-out infinite alternate !important;
   mix-blend-mode: difference !important;
-  /* animation: setaAnimada 3s ease-in-out infinite alternate; */
-  /* transform: translateY(-70%) !important; */
 }
 
 @keyframes setaAnimada {
   0% {
-    transform: translateY(10px);
+    transform: translateY(5px);
   }
 
   100% {
-    transform: translateY(-10px);
+    transform: translateY(-5px);
   }
 
 }
