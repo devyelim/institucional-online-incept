@@ -19,7 +19,7 @@ window.addEventListener('load', function() {
 window.addEventListener("scroll", function(){
   let nav = document.querySelector('#menu')
   nav.classList.toggle('rolagem',window.scrollY > 200)
-})
+});
 
 // window.addEventListener("scroll", function(){
 //   let ul = document.querySelector('#menu-menor')
@@ -259,23 +259,32 @@ $(document).ready(function() {
 
 
 
+let timeout;
+
+function iniciarAnimacao() {
+  const botao = document.getElementById('meuBotao');
+  botao.classList.add('pulsando');
+}
+
+function adicionarPulsacao() {
+  timeout = setTimeout(() => {
+    const botao = document.getElementById('meuBotao');
+    botao.classList.add('pulsando');
+  }, 8000); // 8 segundos
+}
+
+function removerPulsacao() {
+  const botao = document.getElementById('meuBotao');
+  botao.classList.remove('pulsando');
+  clearTimeout(timeout);
+  adicionarPulsacao();
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  adicionarPulsacao();
+
+  document.addEventListener('mousemove', removerPulsacao);
+  document.addEventListener('keypress', removerPulsacao);
+});
 
 
-// $(document).ready(function() {
-//   $('.read-more').click(function() {
-//     var $content = $(this).prev('.contentplanos');
-//     var $card = $(this).parent('.cardplanos .card-body');
-
-//     $content.toggleClass('expanded');
-
-//     if ($content.hasClass('expanded')) {
-//       $content.css('max-height', $content.prop('scrollHeight') + 'px');
-//       $card.css('height', $content.prop('scrollHeight') + 80 + 'px'); // 80px = 40px (cabeçalho) + 40px (rodapé)
-//       $(this).text('Ver menos');
-//     } else {
-//       $content.css('max-height', '230px'); // Altura inicial do conteúdo
-//       $card.css('height', '330px'); // Altura do card com cabeçalho e rodapé
-//       $(this).text('Ver mais');
-//     }
-//   });
-// });

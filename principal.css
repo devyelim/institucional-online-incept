@@ -107,6 +107,37 @@ section {
 }
 
 
+/* Efeito pulsar */
+@keyframes pulso {
+  0% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+}
+
+.botao-pulsante {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  background-color: #3498db;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  animation: none;
+}
+
+.botao-pulsante.pulsando {
+  animation: pulso 2s infinite;
+}
+
 
 /* Modo escuro */
 
@@ -239,7 +270,7 @@ body.dark-mode p,a,i,span{
 .titulos {
   /* color: #1E1E1E; */
   text-align: center;
-  font-family: Montserrat;
+  font-family:"Montserrat";
   font-size: 40px;
   font-style: normal;
   font-weight: 600;
@@ -248,7 +279,7 @@ body.dark-mode p,a,i,span{
 
 .subtitulos {
   /* color: #1E1E1E; */
-  font-family: Montserrat;
+  font-family:"Montserrat";
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
@@ -270,7 +301,7 @@ body.dark-mode p,a,i,span{
 .subtitulo-left {
   text-align: left !important;
   /* color: #1E1E1E; */
-  font-family: Montserrat;
+  font-family:"Montserrat";
   font-size: 15px;
   font-style: normal;
   font-weight: 400;
@@ -286,7 +317,7 @@ body.dark-mode p,a,i,span{
 
 .oferecemosservicos {
   color: #FFF;
-  font-family: Montserrat;
+  font-family:"Montserrat";
   font-size: 30px;
   font-style: normal;
   font-weight: 600;
@@ -399,6 +430,105 @@ nav.menu-desktop ul li a {
   letter-spacing: 1.875px;
 }
 
+
+
+/* Contato Dropdown */
+.dropbtn {
+  /* background-color: #4CAF50; */
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  text-align: right;
+}
+
+.dropdown-persona {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  position: absolute;
+  display: none; 
+  border-radius: 15px 0px 10px 15px;
+  width: 200px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  /* padding: 10px; */
+}
+
+.dropdown-content li {
+  display: block;
+  font-family: "Montserrat";
+  font-size: 10px;
+  color: #fff;
+  padding: 10px 14px !important;
+  text-decoration: none;
+  width: 200px;
+  transition: .2s;
+  cursor: pointer;
+  /* border-bottom: 1px solid #FFF; */
+}
+
+.dropdown-content li:hover {
+  /* background-color: #ffffff33; */
+  /* padding: 10px 14px !important; */
+  font-size: 10px !important;
+  font-size: 16px;
+  border-radius: 10px 0px 10px;
+  color: #000;
+  width: 200px;
+}
+
+.dropdown-persona:hover .dropdown-content {
+  display: block;
+  background-color: #1e1e1ec8;
+  padding: 0px;
+}
+
+
+/* Dropdown Contato versão Menu mobile */
+
+#contato a{
+  /* height: 100%; */
+  background-color: #FFF;
+  color: #000 !important;
+  border-radius: 10px 10px 0px 10px;
+}
+
+#contato li{
+  cursor: pointer;
+  padding: 15px 20px !important;
+  transition: .4s;
+}
+
+#contato li:hover{
+  cursor: pointer;
+  padding: 15px 20px !important;
+  background-color: #1e1e1e72;
+  border-radius: 5px;
+  width: 100%;
+  color: #FFF;
+}
+
+#drop-mobile {
+  display: block; /* Garante que o menu suspenso esteja visível */
+  font-size: "Montserrat";
+  font-size: 13px;
+  border-radius: 10px 0px 10px 10px;
+  color: #FFF;
+  margin: 5px 20px;
+  padding: 10px 10px !important;
+  background-color: #ffffff1a;
+  /* Outros estilos conforme desejado */
+}
+
+
+/* .dropdown-persona:hover .dropbtn {
+  background-color: #3e8e41;
+} */
+
 .logopersona{
   width: 45px;
   height: auto;
@@ -436,7 +566,7 @@ div nav.menu-desktop ul li{
 div nav.menu-desktop ul li a {
   color: #FFF;
   text-align: center;
-  font-family: Montserrat;
+  font-family:"Montserrat";
   font-size: 13px !important;
   font-style: normal;
   font-weight: 100 !important;
@@ -468,7 +598,7 @@ ul, li, a .padding-nav {
   top: 0;
   right: 0;
   z-index: 99999;
-  background-color: #1e1e1ef6;
+  background-color: #1E1E1E;
   height: 100vh;
   width: 0vw;
   overflow: hidden;
@@ -476,7 +606,7 @@ ul, li, a .padding-nav {
 }
 
 .menu-mobile.abrir-menu{
-  width: 42vw;
+  width: 70vw;
 }
 
 .btn-fechar{
@@ -954,7 +1084,7 @@ div .ondas {
 }
 
 .deslize {
-  font-size: min(30px, 5vw) !important;
+  font-size: min(30px, 8vw) !important;
   text-align: center;
   font-family: "aquus", sans-serif;
   align-items: bottom !important;
@@ -967,7 +1097,7 @@ div .ondas {
 .seta {
   position: relative;
   stroke: #000;
-  width: min(17px, 2vw) !important;
+  width: min(17px, 4vw) !important;
   bottom: 0;
   position: relative;
   height: auto !important;
@@ -1114,7 +1244,7 @@ div .ondas {
 
 .subtituloservicos {
 
-  font-family: Montserrat;
+  font-family:"Montserrat";
   font-size: 15px;
   font-style: normal;
   font-weight: 400;
@@ -1125,7 +1255,7 @@ div .ondas {
 .descricaoservicos {
   width: 100%;
   text-align: left;
-  font-family: Montserrat;
+  font-family:"Montserrat";
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -1466,6 +1596,30 @@ section.portifolio .flex {
 /* Galeria */
 
 
+/* Tipografia */
+
+.galeria {
+  color: #2C2B2B;
+  font-family:"Montserrat";
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  padding-bottom: 20px;
+}
+
+.galeriasubtitulos {
+  color: #2C2B2B;
+  font-family:"Montserrat";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  padding-bottom: 20px;
+}
+
+
+/* Universais Galeria */
 
 .rowpersona {
   display: flex;
@@ -1486,6 +1640,12 @@ section.portifolio .flex {
   width: 100%;
 }
 
+/* Aplica um deslocamento vertical de 20px nas colunas 2 e 4 */
+.custom-offset {
+  position: relative;
+  margin-top: -20px !important;
+}
+
 /* Responsive layout - makes a two column-layout instead of four columns */
 @media screen and (max-width: 800px) {
   .column {
@@ -1502,6 +1662,33 @@ section.portifolio .flex {
   }
 }
 
+/* Fim Univiversais Galeria */
+
+
+
+/* Estilização cards/img separadamente */
+
+#row-galeria img {
+  /* opacity: 0.5; */
+  position: relative;
+  transition: 0.5s;
+}
+
+#row-galeria img:hover {
+  box-shadow: 10 0 3px solid #333;
+  /* margin-top: 20px !important; */
+  transform: translateY(-5px);
+}
+
+#roew-galeria img {
+  position: relative;
+  transition: 0.5s;
+}
+
+#reow-galeria img:hover {
+  box-shadow: 0 0 2px #333;
+  margin-top: -10px;
+}
 
 .cardsgaleria {
   border-radius: 5px;
@@ -1512,27 +1699,48 @@ section.portifolio .flex {
   border-radius: 5px;
 }
 
-.galeria {
-  color: #2C2B2B;
-  font-family: Montserrat;
-  font-size: 30px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: normal;
-  padding-bottom: 20px;
+
+
+
+/* Animações Cards Galeria */
+
+/* Definindo a animação para mover para cima e para baixo */
+@keyframes moveUpDown {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px); /* Ajuste a distância vertical conforme necessário */
+  }
 }
 
-.galeriasubtitulos {
-  color: #2C2B2B;
-  font-family: Montserrat;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: normal;
-  padding-bottom: 20px;
+/* Aplicando a animação a cada coluna separadamente com atrasos */
+.coluna1 {
+  animation: moveUpDown 3s ease-in-out infinite alternate;
+  animation-delay: 0s; /* Ajuste o atraso conforme necessário para a primeira coluna */
 }
 
+.coluna2 {
+  animation: moveUpDown 3s ease-in-out infinite alternate;
+  animation-delay: 0.2s; /* Ajuste o atraso conforme necessário para a segunda coluna */
+}
 
+.coluna3 {
+  animation: moveUpDown 3s ease-in-out infinite alternate;
+  animation-delay: 0.4s; /* Ajuste o atraso conforme necessário para a terceira coluna */
+}
+
+.coluna4 {
+  animation: moveUpDown 3s ease-in-out infinite alternate;
+  animation-delay: 0.6s; /* Ajuste o atraso conforme necessário para a quarta coluna */
+}
+
+.coluna5 {
+  animation: moveUpDown 3s ease-in-out infinite alternate;
+  animation-delay: 0.8s; /* Ajuste o atraso conforme necessário para a quinta coluna */
+}
+
+/* Fim Galeria */
 
 
 
@@ -1581,7 +1789,7 @@ section.portifolio .flex {
   width: 100%;
   transition: .5s !important;
   font: inherit;
-  font-family: Montserrat;
+  font-family:"Montserrat";
 
 }
 
@@ -1651,15 +1859,17 @@ section.portifolio .flex {
   overflow: hidden;
   max-height: 230px; /* Altura inicial do conteúdo */
   transition: max-height 0.4s ease; /* Transição suave ao expandir/retrair */
-  padding: 20px;
+  padding: 10px;
   margin: 10px;
 }
 
-.contentplanos p{
+
+.contentplanos li{
   margin-bottom: 8px;
   line-height: normal;
-  font-size: 14px;
+  font-size: 13px;
   text-align: left;
+  list-style: disc;
 }
 
 
@@ -1721,44 +1931,37 @@ section.portifolio .flex {
 
 .button-group {
   display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
 
 .read-more {
-  flex: 1; /* O botão Ler mais ocupará todo o espaço disponível */
+  font-size: 14px;
   background-color: transparent;
   color: #fff;
   border: none;
+  border-radius: 0px;
   padding: 5px 13px;
   cursor: pointer;
   margin-right: 5px; /* Espaçamento entre os botões */
-  border-bottom: 2px transparent solid;
   width: fit-content;
   transition: .3s;
 }
 
-.read-more:hover{
-  border-bottom: #FFF 2px solid;
-  width: fit-content; 
-  transform-origin: left;
-}
 
 .other-button {
-  flex: 1; /* O outro botão ocupará todo o espaço disponível */
+  font-size: 14px;
   background-color: transparent;
   color: #fff;
   border: none;
+  border-left: 2px solid #9796964d;
+  border-radius: 0px;
   padding: 5px 13px;
   cursor: pointer;
   margin-left: 5px; /* Espaçamento entre os botões */
   border-bottom: 2px transparent solid;
   width: fit-content;
   transition: .3s;
-}
-
-.other-button:hover{
-  border-bottom: #FFF 2px solid;
-  width: fit-content;
-  transform-origin: left;
 }
 
 /* Quem Somos */
@@ -1780,9 +1983,6 @@ section.portifolio .flex {
 /* Fale conosco e Formulario de Email */
 
 .contfaleconosco{
-  /* background-image: url(img/fundoemail.png); */
-  /* background-image: url(img/faleconosco-bk.jpg); */
-  /* background-color: #1E1E1E; */
   background: radial-gradient(rgb(27, 73, 87), rgb(1, 21, 28));
     color: rgb(230, 230, 230);
   background-repeat: no-repeat;
@@ -1848,16 +2048,15 @@ i {
 .incept {
 
   text-align: center;
-  font-family: Montserrat;
+  font-family:"Montserrat";
   font-size: 16px;
   font-style: italic;
   font-weight: 600;
   line-height: normal;
 }
 
-.direitosreservados {
-
-  font-family: Montserrat;
+.direitosreservados { 
+  font-family:"Montserrat";
   font-size: 16px;
   font-style: italic;
   font-weight: 300;
@@ -1869,12 +2068,18 @@ i {
   color: #ffffff !important;
 }
 
+.rodapestyle h5 {
+  padding: 0px !important;
+  font-size: 17px;
+}
+
 .rodapestyle ul {
   padding: 0px !important;
 }
 
 .rodapestyle ul li {
   padding: 0px !important;
+  font-size: 14px;
 }
 
 .rodapestyle ul li a {
@@ -1896,195 +2101,8 @@ i {
   margin-bottom: 1.5rem !important;
 }
 
+.icon-social i {
+  font-size: 28px;
+}
+
 /* Rodapé */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
- * Header
- */
-.masthead {
-  margin-bottom: 2rem;
-}
-
-.masthead-brand {
-  margin-bottom: 0;
-}
-
-.nav-masthead .nav-link {
-  padding: .25rem 0;
-  font-weight: 700;
-  color: rgba(255, 255, 255, .5);
-  background-color: transparent;
-  border-bottom: .25rem solid transparent;
-}
-
-.nav-masthead .nav-link:hover,
-.nav-masthead .nav-link:focus {
-  border-bottom-color: rgba(255, 255, 255, .25);
-}
-
-.nav-masthead .nav-link+.nav-link {
-  margin-left: 1rem;
-}
-
-.nav-masthead .active {
-  color: #fff;
-  border-bottom-color: #fff;
-}
-
-@media (min-width: 48em) {
-  .masthead-brand {
-    float: left;
-  }
-
-  .nav-masthead {
-    float: right;
-  }
-}
-
-
-/*
- * Cover
- */
-.cover {
-  padding: 0 1.5rem;
-}
-
-.cover .btn-lg {
-  padding: .75rem 1.25rem;
-  font-weight: 700;
-}
-
-
-/*
- * Footer
- */
-.mastfoot {
-  color: rgba(255, 255, 255, .5);
-}
-
-
-
-/* Create four equal columns that sits next to each other */
-.column {
-  flex: 25%;
-  max-width: 25%;
-  padding: 0 4px;
-}
-
-.column img {
-  margin-top: 8px;
-  vertical-align: middle;
-  width: 100%;
-}
-
-/* Aplica um deslocamento vertical de 20px nas colunas 2 e 4 */
-.custom-offset {
-  position: relative;
-  margin-top: -20px !important;
-}
-
-
-#row-galeria img {
-  /* opacity: 0.5; */
-  position: relative;
-  transition: 0.5s;
-}
-
-#row-galeria img:hover {
-  box-shadow: 0 0 3px #333;
-  /* margin-top: 20px !important; */
-  transform: translateY(-5px);
-}
-
-
-#roew-galeria img {
-  position: relative;
-  transition: 0.5s;
-}
-
-#reow-galeria img:hover {
-  box-shadow: 0 0 2px #333;
-  margin-top: -10px;
-}
-
-
-
-/* Responsive layout - makes a two column-layout instead of four columns */
-@media screen and (max-width: 800px) {
-  .column {
-    flex: 50%;
-    max-width: 50%;
-  }
-}
-
-/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
-  .column {
-    flex: 100%;
-    max-width: 100%;
-  }
-}
-
-#navbar {
-  background-color: #1e1e1e91 !important;
-  transition: all .8s ease-in-out;
-}

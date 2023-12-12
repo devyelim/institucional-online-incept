@@ -26,7 +26,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
     <title>Incept Desing</title>
-    <link rel="shortcut icon" type="imagex/png" href="img/incept-ligth.ico">
+    <link rel="shortcut icon" type="imagex/png" href="img/logo-icon.ico">
   </head>
 
   <body>
@@ -35,54 +35,8 @@
       <img class="img-fluid" style="width: 100px; height: 100px;" src="img/giphy.gif">
     </div>
     <div class="container-fluid mx-auto flex-column" style="padding: 0px !important;" id="conteudoPagina">
-
- <!-- <nav id="menu" class="navbar bg-transparent fixed-top navbar-expand-lg navbar-dark mb-4 fall" aria-label="Navbar">
-
-      
-      <div class="container">
-        <a  class="navbar-brand" href="/index1.html">
-          <img id="logo" src="img/incept-ligth.png" alt="Incept Design">
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-          data-bs-target="#navbarsExample07" aria-controls="navbarsExample07"
-          aria-expanded="false" aria-label="Toggle navigation">
-          <span class="bi bi-list" style="width: 40px !important; height: 50px;"></span> 
-        </button>
-        
-        <div class="align-items-end collapse navbar-collapse"
-          id="navbarsExample07" style="flex-grow: 0 !important;">
-          <ul id="ulnav" class="padding-nav navbar-nav me-auto mb-2 mb-lg-0 mt-2">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Inicio</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" href="#">Portifolio</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active">Serviços</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active">Quem somos</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link active dropdown-toggle" href="#"
-                data-bs-toggle="dropdown" aria-expanded="false">Contato</a>
-              <ul id="dropnav" class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Instagram</a></li>
-                <li><a class="dropdown-item" href="#">Facebook</a></li>
-                <li><a class="dropdown-item" href="#">Whatsapp</a></li>
-              </ul>
-            </li>
-          </ul>
-        </div>            
-      </div>
-      
-    </nav> -->
-
-   
-    
       <div class="interface fixed-top mx-5" id="menu-menor">
-        
+        <!-- Menu Desktop -->
         <nav id="menu" class="menu-desktop navbar bg-transparent fixed-top navbar-expand-lg navbar-dark mb-4 fall">
           <div class="container">
             <a href="/index.html">
@@ -90,24 +44,26 @@
             </a> 
             <ul id="ulnav" class="esconder-mobile padding-nav" style="margin-bottom: 0px;">
               <li class="nav-item">
-                <a class="nav-link active"  href="#">Inicio</a>
+                <a class="nav-link active"  href="index.html">Início</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" href="#">Portifolio</a>
+                <a class="nav-link active" href="#oquefazemos">Serviços</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active">Serviços</a>
+                <a class="nav-link active" href="#portifolio">Portifólio</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active">Quem somos</a>
+                <a class="nav-link active" href="#planoseprecos">Planos e Preços</a>
               </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link active dropdown-toggle" href="#"
-                  data-bs-toggle="dropdown" aria-expanded="false">Contato</a>
-                <ul id="dropnav" class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Instagram</a></li>
-                  <li><a class="dropdown-item" href="#">Facebook</a></li>
-                  <li><a class="dropdown-item" href="#">Whatsapp</a></li>
+              <li class="nav-item">
+                <a class="nav-link active" href="#quemsomos">Quem somos</a>
+              </li>
+              <li class="nav-item dropdown-persona">
+                <a class="nav-link dropbtn">Contato</a>
+                <ul class="dropdown-content">
+                  <li><a class="nav-link"href="https://www.instagram.com/incep.design/">Instagram</a></li>
+                  <li><a class="nav-link" href="https://api.whatsapp.com/send/?phone=5538998604242&text&type=phone_number&app_absent=0">Whatsapp</a></li>
+                  <li><a class="nav-link" href="#faleconosco">Fale Conosco</a></li>
                 </ul>
               </li>
             </ul>
@@ -117,8 +73,7 @@
             </div>
           </div>
         </nav>
-
-   
+        <!-- Menu Mobile -->
         <nav class="menu-mobile" id="menu-mobile">
           <div class="btn-fechar">
             <i class="bi bi-x-lg"></i>
@@ -136,18 +91,15 @@
             <li class="nav-item">
               <a class="nav-link active">Quem somos</a>
             </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link active dropdown-toggle" href="#"
-                data-bs-toggle="dropdown" aria-expanded="true">Contato</a>
-              <ul id="dropnav" class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Instagram</a></li>
-                <li><a class="dropdown-item" href="#">Facebook</a></li>
-                <li><a class="dropdown-item" href="#">Whatsapp</a></li>
+            <li class="nav-item" id="contato">
+              <a class="nav-link">Contato</a>
+              <ul id="drop-mobile">
+                <li href="https://api.whatsapp.com/send/?phone=5538998604242&text=&type=phone_number&app_absent=0">Whatsapp</li>
+                <li href="https://www.instagram.com/incep.design/">Instagram</li>
               </ul>
             </li>
           </ul>
         </nav>
-          
         <div class="overlay-menu" id="overlay-menu"></div>
       </div>
     
@@ -161,9 +113,6 @@
           <div class="onda3" id="onda4"></div>
         </div>
         
-        <!-- <svg class="mysvg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1881 712" fill="none">
-          <path d="M0 469.891V0H1881V469.891C1772.32 485.936 1625.3 878.235 1463.29 629.769C1243.96 293.395 1021.09 433.091 868.809 378.778C606.922 285.373 481.603 228.17 353.547 394.823C228.496 557.566 97.5527 523.375 0 469.891Z" fill="black" fill-opacity="0.6"/>
-        </svg> -->
         <div class="si-container px-4 text-center vertical">
           <div class="nocturne visit-card">
             <h1 class="somos-incept my-4">Somos Incept </h1>
@@ -173,7 +122,7 @@
             </div>
             
             <div class="deslize">
-              <p >DESLIZE</p>
+              <p>DESLIZE</p>
               <svg class="seta" xmlns="http://www.w3.org/2000/svg" width="16" height="152" viewBox="0 0 16 152" fill="none">
                 <g >
                 <circle cx="8.06769" cy="6.36603" r="4.51095" stroke="white" stroke-width="1.8"/>
@@ -197,7 +146,7 @@
       </div>
 
       <div id="oquefazemos">
-        <div class="nocturne container align-self-center title-inner my-5 py-5">
+        <div class="nocturne container title-inner my-5 py-5">
           <div class="row flex-lg-row g-5">
             <div class="col-lg-3 p-4 m-0">
             <p class="pretitulo">O QUE FAZEMOS?</p>
@@ -218,7 +167,7 @@
                         <p class="descricaoservicos">Design criativo e inteligente não é o suficiente. 
                           É preciso complementa-lo com estratégia e técnicas de alcance!
                         </p>
-                        <!-- <a class="btn btn-reedmore fw-bold"><span><i class="bi bi-arrow-return-right"></i>Ver todos os benefícios!</span></a> -->
+                       
                       </div>
                     </div>
                     <div class="col-lg-6 col-sm-12 d-flex align-items-start p-3 mb-6">
@@ -228,7 +177,7 @@
                         <p class="descricaoservicos">Sites institucionais, lojas online e sistemas de Gestão de Negócios. 
                           Oferecemos o pacote completo para que sua empresa decole.
                         </p>
-                        <!-- <a class="btn btn-reedmore fw-bold"><span><i class="bi bi-arrow-return-right"></i>Ver todos os benefícios!</span></a> -->
+                       
                       </div>
                     </div>
                   </div>
@@ -240,7 +189,7 @@
                         <p class="descricaoservicos">Criamos templates intuitivos, personalizados e exclusivos. 
                           Manter sua Identidade Visual é nossa especialidade, assim como deixar sua marca ainda mais atrativa.
                         </p>
-                        <!-- <a class="btn btn-reedmore fw-bold"><span><i class="bi bi-arrow-return-right"></i>Ver todos os benefícios!</span></a> -->
+                       
                       </div>
                     </div>
                     <div class="col-lg-6 col-sm-12 d-flex align-items-start p-3 mb-6">
@@ -250,7 +199,7 @@
                         <p class="descricaoservicos">Te ajudamos a impulsionar sua marca do zero. 
                           Alcance clientes com recursos atuais, consultoria online e profissional.
                         </p>
-                        <!-- <a class="btn btn-reedmore fw-bold"><span><i class="bi bi-arrow-return-right"></i>Ver todos os benefícios!</span></a> -->
+                       
                       </div>
                     </div>
                   </div>                           
@@ -262,7 +211,7 @@
       </div>
       
       <!-- Projetos/Portifolio -->
-      <section class="sectionprojetos textura container-fluid img-fluid cover py-lg-2 hcf-bp-center hcf-bs-cover">
+      <section id="portifolio" class="sectionprojetos textura container-fluid img-fluid cover py-lg-2 hcf-bp-center hcf-bs-cover">
         <div class="nocturne">
           <div class="container">
             <div class="pt-5 my-5 py-5 text-center">
@@ -413,7 +362,7 @@
 
       <!-- Planos e Preços -->
       <section id="planoseprecos" class="container-fluid planosbk img-fluid cover py-lg-10 hcf-bp-center hcf-bs-cover hcf-overlay">
-        <div class="container">
+        <div class="container py-5">
           <div class="text-center">
             <div class="sectionplanos">
               <div class="contplanos">
@@ -432,17 +381,17 @@
                     <p class="precoplanos">R$ 349,90</p>
                     <p class="tipoplanos">mensalidade</p>
                   </div>
-                  <div class="card-body contentplanos">
-                    <p>Conteúdo do Card 1. Este é o primeiro parágrafo.</p>
-                    <p>Este é o segundo parágrafo do Card 1.</p>
-                    <p>Terceiro parágrafo do Card 1.</p>
-                    <p>Conteúdo do Card 1. Este é o primeiro parágrafo.</p>
-                    <p>Este é o segundo parágrafo do Card 1.</p>                      
-                    <p>Ultimo</p>
-                    <p>Conteúdo do Card 1. Este é o primeiro parágrafo.</p>
-                    <p>Este é o segundo parágrafo do Card 1.</p>                      
-                    <p>Ultimo</p>
-                  </div>
+                  <ol class="card-body contentplanos">
+                    <li>Conteúdo do Card 1. Este é o primeiro parágrafo.</li>
+                    <li>Este é o segundo parágrafo do Card 1.</li>
+                    <li>Terceiro parágrafo do Card 1.</li>
+                    <li>Conteúdo do Card 1. Este é o primeiro parágrafo.</li>
+                    <li>Este é o segundo parágrafo do Card 1.</li>                      
+                    <li>Ultimo</li>
+                    <li>Conteúdo do Card 1. Este é o primeiro parágrafo.</li>
+                    <li>Este é o segundo parágrafo do Card 1.</li>                      
+                    <li>Ultimo</li>
+                  </ol>
                   <div class="rodapeplanos">
                     <div class="button-group">
                       <button class="read-more">Ver mais</button>
@@ -461,20 +410,20 @@
                     <p class="precoplanos">R$ 659,90</p>
                     <p class="tipoplanos">mensalidade</p>
                   </div>
-                  <div class="card-body contentplanos">
-                    <p>Conteúdo do Card 1. Este é o primeiro parágrafo.</p>
-                    <p>Este é o segundo parágrafo do Card 1.</p>
-                    <p>Terceiro parágrafo do Card 1.</p>
-                    <p>Conteúdo do Card 1. Este é o primeiro parágrafo.</p>
-                    <p>Este é o segundo parágrafo do Card 1.</p>
-                    <p>Terceiro parágrafo do Card 1.</p>
-                    <p>Conteúdo do Card 1. Este é o primeiro parágrafo.</p>
-                    <p>Este é o segundo parágrafo do Card 1.</p>
-                    <p>Ultimo</p>
-                  </div>                      
+                  <ol class="card-body contentplanos">
+                    <li>Conteúdo do Card 1. Este é o primeiro parágrafo.</li>
+                    <li>Este é o segundo parágrafo do Card 1.</li>
+                    <li>Terceiro parágrafo do Card 1.</li>
+                    <li>Conteúdo do Card 1. Este é o primeiro parágrafo.</li>
+                    <li>Este é o segundo parágrafo do Card 1.</li>                      
+                    <li>Ultimo</li>
+                    <li>Conteúdo do Card 1. Este é o primeiro parágrafo.</li>
+                    <li>Este é o segundo parágrafo do Card 1.</li>                      
+                    <li>Ultimo</li>
+                  </ol>                      
                   <div class="rodapeplanos">
                     <div class="button-group">
-                      <button class="read-more">Ver mais</button>
+                      <button class="read-more botao-pulsante" id="meuBotao">Ver mais</button>
                       <a rel="noopener noreferrer" href="https://api.whatsapp.com/send/?phone=5538998604242&text=Olá! Tenho interesse no Plano Intermediário, pode me falar mais sobre ele?&type=phone_number&app_absent=0" target="_blank">
                         <button class="other-button">Contratar</button>
                       </a>
@@ -488,17 +437,17 @@
                     <p class="precoplanos">R$ 1.299,90</p>
                     <p class="tipoplanos">mensalidade</p>
                   </div>
-                  <div class="card-body contentplanos">
-                    <p>Conteúdo do Card 1. Este é o primeiro parágrafo.</p>
-                    <p>Este é o segundo parágrafo do Card 1.</p>
-                    <p>Terceiro parágrafo do Card 1.</p>
-                    <p>Conteúdo do Card 1. Este é o primeiro parágrafo.</p>
-                    <p>Este é o segundo parágrafo do Card 1.</p>
-                    <p>Terceiro parágrafo do Card 1.</p>
-                    <p>Conteúdo do Card 1. Este é o primeiro parágrafo.</p>
-                    <p>Este é o segundo parágrafo do Card 1.</p>
-                    <p>Ultimo</p>
-                  </div>                      
+                  <ol class="card-body contentplanos">
+                    <li>Conteúdo do Card 1. Este é o primeiro parágrafo.</li>
+                    <li>Este é o segundo parágrafo do Card 1.</li>
+                    <li>Terceiro parágrafo do Card 1.</li>
+                    <li>Conteúdo do Card 1. Este é o primeiro parágrafo.</li>
+                    <li>Este é o segundo parágrafo do Card 1.</li>                      
+                    <li>Ultimo</li>
+                    <li>Conteúdo do Card 1. Este é o primeiro parágrafo.</li>
+                    <li>Este é o segundo parágrafo do Card 1.</li>                      
+                    <li>Ultimo</li>
+                  </ol>                     
                   <div class="rodapeplanos">
                     <div class="button-group">
                       <button class="read-more">Ver mais</button>
@@ -517,10 +466,10 @@
       <div class="espaco-vertical"></div>
 
       <!-- Quem Somos -->
-      <div class="container-fluid">
-        <div id="Quem somos" class="container">
+      <div id="quemsomos" class="container-fluid">
+        <div class="container">
           <div class="row container nocturne my-5 p-5">
-            <h2 class="titulos text-justify mb-5">FUNDADORES</h2>
+            <h2 class="titulos text-center mb-5 fall">FUNDADORES</h2>
         
             
             <div class="pr-2 mb-4 col-lg-6 esquerda-direita">
@@ -539,7 +488,7 @@
               </div>
             </div>
             
-            <div class="pr-2 mb-4 col-lg-6 esquerda-direita">
+            <div class="pr-2 mb-4 col-lg-6 direita-esquerda">
               <div class="row g-0 align-items-center">
                 <div class="col-md-6 col-sm-6">
                   <img src="img/quemsomosemily.png" class=" rounded-2 quemsomosimg" alt="...">
@@ -559,7 +508,7 @@
       </div>
           
       <!-- Formulario Fale conosco -->
-      <div class="container-fluid contfaleconosco hcf-bp-center hcf-bs-cover">
+      <div id="faleconosco" class="container-fluid contfaleconosco hcf-bp-center hcf-bs-cover">
         <div class="container col-xl-10 col-xxl-8 px-4 py-5">
           <div class="row flex-lg-row-reverse align-items-center g-lg-2 py-5 nocturne">
             <!-- <div class="col-lg-6">
@@ -598,8 +547,8 @@
       <div class="espaco-vertical"></div>
 
       <!-- Galeria -->
-      <section id="Galeria" class="container my-5 direita-esquerda col-xxl-8" >
-        <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+      <section id="galeria" class="container my-5 col-xxl-8" >
+        <div class="row nocturne flex-lg-row-reverse align-items-center g-5 py-5">
           <div class="col-sm-12 col-md-12 col-lg-4  mb-6" >
             <p class="pretitulo">ANTES DE IR...</p>
             <h2 class="titulo-left">CONHEÇA NOSSA GALERIA</h2>
@@ -612,27 +561,27 @@
           </div>
           <div class="col-lg-8 col-sm-12 col-md-12 mx-auto">
             <div class="rowpersona" >
-              <div class="column" id="row-galeria">
-                <img id="uni-galeria" src="img/1.jpeg" class="cardsgaleria">
+              <div class="column coluna1" id="row-galeria">
+                <img src="img/1.jpeg" class="cardsgaleria">
                 <img src="img/2.jpeg" class="cardsgaleria">
                 <img src="img/3.jpeg" class="cardsgaleriavari">                    
               </div>
-              <div class="column custom-offset" id="row-galeria">
+              <div class="column custom-offset coluna2" id="row-galeria">
                 <img src="img/3.jpeg" class="cardsgaleria">
                 <img src="img/4.jpeg" class="cardsgaleriavari">
                 <img src="img/6.jpeg" class="cardsgaleria">                    
               </div>
-              <div class="column" id="row-galeria">
+              <div class="column coluna3" id="row-galeria">
                 <img src="img/7.jpeg" class="cardsgaleria">
                 <img src="img/8.jpeg" class="cardsgaleriavari">
                 <img src="img/9.jpeg" class="cardsgaleria">
               </div>
-              <div class="column custom-offset" id="row-galeria">
+              <div class="column custom-offset coluna4" id="row-galeria">
                 <img src="img/11.jpeg" class="cardsgaleria">
                 <img src="img/12.jpg" class="cardsgaleriavari">
                 <img src="img/13.jpg" class="cardsgaleria">
               </div>
-              <div class="column" id="row-galeria">
+              <div class="column coluna5" id="row-galeria">
                 <img src="img/4.jpeg" class="cardsgaleriavari">
                 <img src="img/2.jpeg" class="cardsgaleria">
                 <img src="img/5.jpeg" class="cardsgaleria">
@@ -646,7 +595,7 @@
     
     <!-- Rodapé -->
     <div id="Rodapé" class="container-fluid rodapestyle">
-      <div class="fixos fixed-bottom mr-4">
+      <div class="fixos fixed-bottom col-1 mr-4">
         <div class="mb-5">
           <a href='#topo'>
             <button type="button" class="btn btn-light voltar-topo">                
@@ -668,68 +617,72 @@
           </div>
         </div> -->
       </div>
-      <footer class="pt-5">
-        <div class="row py-6 border-top">
-          <div class="container mx-4 col-lg-2 col-md-12 my-3 pl-5" style="align-items: center !important; justify-content: center;">              
-            <img src="img/incept-ligth.png" style="width: 50px;" class="img-fluid">
-          </div>
+      <footer class="pt-5 ">
+        <div class="border-top">
+          <div class="container">
+            <div class="row py-6">
+              <div class="mx-4 col-lg-2 col-md-12 my-4" >              
+                <img src="img/incept-ligth.png" style="width: 50px;" class="img-fluid">
+              </div>
+        
+              <div class="col-lg-2 col-md-3 col-sm-3 my-3 pl-5">
+                <h5>INICIO</h5>
+                <ul class="nav flex-column my-3">
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Sobre nós</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Serviços</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Portifólio</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Orçamentos</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Prazos e preços</a></li>
+                </ul>
+              </div>
+        
+              <div class="col-lg-2 col-md-3 col-sm-3 my-3 pl-5">
+                <h5>DESENVOLVIMENTO</h5>
+                <ul class="nav flex-column my-3">
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">E-commerces</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Intitucionais</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Templates</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Direitos Autorais</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Metodologia</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Implementação</a></li>
+                </ul>
+              </div>
     
-          <div class="col-lg-2 col-md-3 col-sm-3 my-3 pl-5">
-            <h5>INICIO</h5>
-            <ul class="nav flex-column my-3">
-              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Sobre nós</a></li>
-              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Serviços</a></li>
-              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Portifólio</a></li>
-              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Orçamentos</a></li>
-              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Prazos e preços</a></li>
-            </ul>
-          </div>
+              <div class="col-lg-2 col-md-3 col-sm-3 my-3 pl-5">
+                <h5>AJUDA</h5>
+                <ul class="nav flex-column my-3">
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Fale conosco</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Reportar erro</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Feedback</a></li>
+                </ul>
+              </div>
     
-          <div class="col-lg-2 col-md-3 col-sm-3 my-3 pl-5">
-            <h5>DESENVOLVIMENTO</h5>
-            <ul class="nav flex-column my-3">
-              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">E-commerces</a></li>
-              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Intitucionais</a></li>
-              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Templates</a></li>
-              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Direitos Autorais</a></li>
-              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Metodologia</a></li>
-              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Implementação</a></li>
-            </ul>
+              <div class="col-lg-3 col-md-2 col-sm-3 my-3 pl-5">
+                <h5>CANAIS DE ATENDIMENTO</h5>
+                <ul class="nav flex-column my-3 ">
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted"><span><i class="bi bi-envelope"></i>inceptfaleconosco@gmail.com</span></a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted"><span><i class="bi bi-telephone"></i>(38) 99860-4242</span></a></li>               
+                </ul>
+                <h5 class="mt-5">NOS ENCONTRE AQUI</h5>
+                <ul class="list-unstyled d-flex my-3 icon-social">
+                  <li class="">
+                    <a href="https://www.instagram.com/incep.design/">
+                      <h2><i class="bi bi-instagram"></i></h2>
+                    </a>
+                  </li>
+                  <li class=""><a href="#">
+                    <h2><i class="bi bi-facebook"></i></h2>
+                  </a>
+                  </li>
+                  <li class=""><a href="https://api.whatsapp.com/send/?phone=5538998604242&text&type=phone_number&app_absent=0">
+                    <h2><i class="bi bi-whatsapp"></i></h2>
+                  </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
-
-          <div class="col-lg-2 col-md-3 col-sm-3 my-3 pl-5">
-            <h5>AJUDA</h5>
-            <ul class="nav flex-column my-3">
-              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Fale conosco</a></li>
-              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Reportar erro</a></li>
-              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Feedback</a></li>
-            </ul>
-          </div>
-
-          <div class="col-lg-3 col-md-2 col-sm-3 my-3 pl-5">
-            <h5>CANAIS DE ATENDIMENTO</h5>
-            <ul class="nav flex-column my-3 ">
-              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted"><span><i class="bi bi-envelope"></i>inceptfaleconosco@gmail.com</span></a></li>
-              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted"><span><i class="bi bi-telephone"></i>(38) 99860-4242</span></a></li>               
-            </ul>
-            <h5 class="mt-5">NOS ENCONTRE AQUI</h5>
-            <ul class="list-unstyled d-flex my-3">
-              <li class="">
-                <a href="https://www.instagram.com/incep.design/">
-                  <h2><i class="bi bi-instagram"></i></h2>
-                </a>
-              </li>
-              <li class=""><a href="#">
-                <h2><i class="bi bi-facebook"></i></h2>
-              </a>
-              </li>
-              <li class=""><a href="https://api.whatsapp.com/send/?phone=5538998604242&text&type=phone_number&app_absent=0">
-                <h2><i class="bi bi-whatsapp"></i></h2>
-              </a>
-              </li>
-            </ul>
-          </div>
-          
+        
         </div>
         
         <div class="text-center border-top pb-3">

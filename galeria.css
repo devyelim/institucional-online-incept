@@ -8,7 +8,7 @@
 
 
 .bodygaleria{
-  /* background-color: #333; */
+  background-color: #2C2B2B;
 }
 
 
@@ -111,7 +111,7 @@ padding: 10px;
 /* Navbar Scroll */
 
 .navgaleria.rolagem {
-  background-color: #1E1E1E !important;
+  background-color: #1B5A5F !important;
   height: auto;
   transition: 0.4s ease-in !important;
   padding: 10px 30px !important;
@@ -141,7 +141,13 @@ padding: 10px;
 /* Fim Navbar Scroll */
 
 
+.bread-ligth{
+  color: #fff !important;
+}
 
+.bread-ligth i{
+  color: #fff !important;
+}
 
 
 
@@ -233,12 +239,19 @@ img {
 }
 
 .img-galeria {
-    border-radius: 20px !important;
+    border-radius: 15px !important;
 }
 
 /* .relative{
     position: relative !important;
 } */
+
+
+/* Rodapé Galeria*/
+
+.borda-t{
+  border-top: #7b7b7b solid 2px;
+}
 
 .rodapestylegaleria {
   background-color: #eaeaea;
@@ -246,15 +259,21 @@ img {
   padding: 20px;
 }
 
-.borda-t{
-  border-top: #7b7b7b solid 2px;
+.icon-social i {
+  font-size: 28px;
 }
+
+.rodapestylegaleria h5{
+  font-size: 17px !important;
+}
+
 
 .rodapestylegaleria ul {
   padding: 0px !important;
 }
 
 .rodapestylegaleria li{
+  font-size: 14px;
   padding: 0px !important;
   /* margin: 0px !important; */
   transition: 0.1s !important;
