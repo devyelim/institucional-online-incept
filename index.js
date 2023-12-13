@@ -27,6 +27,40 @@ window.addEventListener("scroll", function(){
 // })
 
 
+// Animação Maquina de Escrever Tela Incial
+
+// const phrases = [' Incept', ' uma idéia', ' um time'];
+// let index = 0;
+// let letterIndex = 0;
+// let currentPhrase = phrases[index];
+// let typingText = document.getElementById('typing');
+// let prefix = document.getElementById('prefix');
+
+// function type() {
+//   if (letterIndex < currentPhrase.length) {
+//     typingText.innerHTML += currentPhrase.charAt(letterIndex);
+//     letterIndex++;
+//     setTimeout(type, Math.floor(Math.random() * 200) + 100); // Velocidade de digitação aleatória
+//   } else {
+//     setTimeout(erase, 2000); // 2.5 segundos para reiniciar
+//   }
+// }
+
+// function erase() {
+//   if (letterIndex > 0) {
+//     typingText.innerHTML = currentPhrase.substring(0, letterIndex - 1);
+//     letterIndex--;
+//     setTimeout(erase, 100); // Velocidade em que se apaga
+//   } else {
+//     index = (index + 1) % phrases.length;
+//     currentPhrase = phrases[index];
+//     setTimeout(type, 600);
+//   }
+// }
+
+// type(); // Começar a animação
+
+
 
 // Mudar logo conforme Scroll
 jQuery("document").ready(function($){
