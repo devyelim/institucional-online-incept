@@ -1,0 +1,2203 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500;1,600&display=swap');
+
+@font-face {
+  font-family: "aquus";
+  src: url(/fontes/Aquus-Regular.ttf) format('truetype');
+}
+
+
+.cores {
+  color: #FDB724;
+  color: #1B5A5F;
+  color: #2C2B2B;
+  color: #1E1E1E;
+  color: #ffffff;
+}
+
+/*
+ * Estrutura basica
+ */
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  background-color: #ffffff;
+  overflow-x: hidden;
+  transition: .5s;
+}
+
+body h2 {
+  font-family: "Montserrat";
+  /* color:#1E1E1E; */
+}
+
+h2 {
+  font-size: min(28px, 10vw) !important;
+}
+
+section {
+  display: grid;
+  place-items: center;
+  min-height: 110vh !important;
+  /* background-color: #fff; */
+}
+
+
+.tela-carregamento {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #1E1E1E;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999; /* Garante que a tela de carregamento esteja acima de tudo */
+  opacity: 1; /* Definindo a opacidade inicial */
+  transition: opacity 1s ease;
+}
+
+#topo {
+  transition: .9s;
+}
+
+
+.logo {
+  width: 100px !important;
+  height: 100px;
+}
+
+
+.nocturne, .efeito-card1, .efeito-card2, .efeito-card3,
+.esquerda-direita, .direita-esquerda, .efeito-card4, .efeito-card5, .efeito-card6, .efeito-card7, .fall-name,
+.fall-email, .fall-mensagem, .fall-env {
+  visibility: hidden;
+}
+
+.fixos {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+
+
+/* Voltar ao topo */
+
+.voltar-topo {
+  border-radius: 30px !important;
+  height: 40px;
+  width: 70px;
+  background-color: #1E1E1E !important;
+  border: #fff solid 2px !important;
+}
+
+.voltar-topo i {
+  color: #fff;
+  font-weight: 300;
+  position: relative;
+  align-items: center;
+  padding: 0px !important;
+}
+
+
+/* Efeito pulsar */
+@keyframes pulso {
+  0% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+}
+
+.botao-pulsante {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  background-color: #3498db;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  animation: none;
+}
+
+.botao-pulsante.pulsando {
+  animation: pulso 2s infinite;
+}
+
+
+/* Modo escuro */
+
+.trilho {
+  width: 70px;
+  height: 35px;
+  background-color: #747474;
+  border: #373737 solid 2px;
+  border-radius: 20px;
+  position: relative;
+
+}
+
+.trilho .indicador {
+  width: 30px;
+  height: 30px;
+  margin: 0px 2px;
+  background-color: #fff;
+  border: #373737 solid 2px;
+  border-radius: 20px;
+  transform: scale(.8);
+  cursor: pointer;
+  position: absolute;
+  left: 0;
+  transition: .5s;
+}
+
+.trilho.dark-mode {
+  background-color: #d1d1d1;
+  border: #fff solid 2px;
+}
+
+.trilho.dark-mode .indicador {
+  left: 33px;
+  background-color: #1e1e1e;
+  border: #fff solid 2px;
+}
+
+.voltar-topo {
+  color: #000;
+}
+
+body.dark-mode {
+  background-color: #1e1e1e;
+
+}
+
+/* body.dark-mode h1, h2, h3, h4, h5, p, ul, li, a, span, button{
+
+} */
+
+
+/* Icones sol e lua */
+
+.iconcont {
+  display: flex;
+  margin: 3px 5px;
+  align-items: center;
+}
+
+.lua {
+  opacity: 1;
+  color: #fff !important;
+  padding: 0px !important;
+  margin-left: 7px;
+}
+
+.sol {
+  opacity: 0;
+  padding: 0px !important;
+  margin: 0px 2px;
+}
+
+.trilho.dark-mode .sol {
+  color: #1E1E1E !important;
+  opacity: 1;
+}
+
+.trilho.dark-mode .lua {
+  opacity: 0;
+}
+
+
+
+.trilho.dark-mode {
+  background-color: #1B5A5F;
+}
+
+/* .trilho.dark-mode h1, h2, h3, h4, h5, p, a, span, i, button{
+  color: #ffffff ;
+} */
+
+
+/* body.dark-mode h1,h2,h3,h4,h5{
+
+}
+
+body.dark-mode p,a,i,span{
+
+} */
+
+.trilho.dark-mode svg {
+  fill: #1E1E1E !important;
+}
+
+
+
+
+
+
+
+.ocult {
+  opacity: 0;
+  filter: blur(12px);
+  transform: translateX(-100%);
+  transition: all 1s;
+}
+
+.visible {
+  opacity: 1 !important;
+  filter: blur(0px);
+  transform: translateX(0);
+  transition: all 1s;
+}
+
+.fall {
+  transform: translateY(-100px);
+  animation: 1.2s slideIn ease-in-out forwards 1s;
+  z-index: 10;
+  opacity: 0;
+  position: relative;
+}
+
+.fall::before {
+  content: '';
+  background-color: var(--secondary-color);
+  position: absolute;
+  animation: 1s underline ease-in-out forwards 2s;
+}
+
+
+@keyframes slideIn {
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes underline {
+  100% {
+    width: 100%;
+  }
+}
+
+
+/* Classes Globais Personalizadas */
+
+.span-dec {
+  /* color: #FDB724; */
+  font-weight: bold;
+}
+
+.titulos {
+  /* color: #1E1E1E; */
+  text-align: center;
+  font-family:"Montserrat";
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.subtitulos {
+  /* color: #1E1E1E; */
+  font-family:"Montserrat";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.titulo-left {
+  text-align: left !important;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.subtitulo-left {
+  text-align: left !important;
+  /* color: #1E1E1E; */
+  font-family:"Montserrat";
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.explicativo-planos {
+  margin-right: 20px;
+  max-width: 309px !important;
+  height: 179px;
+  flex-shrink: 0;
+}
+
+.oferecemosservicos {
+  color: #FFF;
+  font-family:"Montserrat";
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  padding-bottom: 20px;
+}
+
+.pretitulo {
+  width: fit-content !important;
+  background-color: #FDB724;
+  border-bottom: #1E1E1E solid 2px;
+  padding: 3px;
+}
+
+.pretitulo-ligth {
+  width: fit-content !important;
+  background-color: #ffffff;
+  border-bottom: #ffffff solid 2px;
+
+  padding: 3px;
+}
+
+/* Botões */
+
+.btnpersona {
+  width: 100%;
+}
+
+.btn-yellow {
+  background-color: #FDB724 !important;
+  color: #1E1E1E !important;
+}
+
+.btn-yellow:hover {
+  width: 270px;
+  background-color: #333 !important;
+  /* border: #FDB724 solid 2px !important; */
+  color: #FDB724 !important;
+  transition: 0.5s !important;
+}
+
+.btn-highligth {
+  background-color: #ffffff !important;
+  color: #1E1E1E !important;
+}
+
+.btn-highligth:hover {
+  background-color: #1B5A5F !important;
+  color: #ffffff !important;
+  transition: 0.4s;
+}
+
+.btn-pdark{
+  background-color: #1e1e1e !important;
+  color: #fff !important;
+  transition: 0.3s;
+}
+
+.btn-pdark:hover{
+  background-color: #4e4e4e !important;
+  color: #fff !important;
+  transition: 0.3s;
+
+}
+
+
+/* Botões */
+
+
+
+/* Navbar */
+
+div > .interface{
+  display: flex;
+  align-items: center;
+  text-align: right;
+  /* justify-content: space-around; */
+  /* margin: 20px 150px; */
+}
+
+nav.menu-desktop {
+  /* display: flex !important; */
+  margin-inline: auto !important;
+  justify-content: space-between !important;
+  align-items: center;
+  height: auto !important;
+  padding: 25px !important;
+  transition: 0.5s ease-in !important;
+  width: 100%;
+}
+
+nav ul{
+  list-style-type: none;
+  display: flex;
+  position: absolute;
+  right: 0;
+  padding-right: 130px !important;
+}
+
+nav.menu-desktop ul li a {
+  color: #FFF;
+  text-align: center;
+  font-family: "Montserrat";
+  font-size: 12px !important;
+  font-style: normal;
+  font-weight: 300 !important;
+  line-height: 30px;
+  /* 200% */
+  letter-spacing: 1.875px;
+}
+
+
+
+/* Contato Dropdown */
+.dropbtn {
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  text-align: right;
+}
+
+.dropdown-persona {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  position: absolute;
+  display: none; 
+  border-radius: 15px 0px 10px 15px;
+  width: 200px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  /* padding: 10px; */
+}
+
+.dropdown-content li {
+  display: block;
+  font-family: "Montserrat";
+  font-size: 10px;
+  color: #fff;
+  padding: 10px 14px !important;
+  text-decoration: none;
+  width: 200px;
+  transition: .2s;
+  cursor: pointer;
+}
+
+.dropdown-content li:hover {
+  font-size: 10px !important;
+  font-size: 16px;
+  border-radius: 10px 0px 10px;
+  color: #000;
+  width: 200px;
+}
+
+.dropdown-persona:hover .dropdown-content {
+  display: block;
+  background-color: #1e1e1ec8;
+  padding: 0px;
+}
+
+
+/* Dropdown Contato versão Menu mobile */
+
+#contato a{
+  /* height: 100%; */
+  /* background-color: #ffffff34; */
+  /* color: #fff !important; */
+  /* border-radius: 5px 5px 0px 0px; */
+}
+
+#contato li{
+  cursor: pointer;
+  padding: 10px !important;
+  transition: .3s;
+}
+
+#contato li:hover{
+  cursor: pointer;
+  /* padding: 15px 20px !important; */
+  background-color: #1e1e1eb6;
+  border-radius: 5px;
+  width: 100%;
+
+}
+
+#drop-mobile {
+  display: flex; /* Garante que o menu suspenso esteja visível */
+  flex-direction: row;
+  font-size: "Montserrat";
+  /* font-size: 13px; */
+  color: #FFF;
+  /* margin: 0px 20px; */
+  padding: 10px 10px !important;
+  /* background-color: #ffffff07; */
+  align-items: center;
+  justify-content: space-between;
+  /* Outros estilos conforme desejado */
+}
+
+#drop-mobile a{
+  background-color: transparent;
+  padding: 0px;
+  font-size: 12px;
+}
+
+
+.logopersona{
+  width: 45px;
+  height: auto;
+  z-index: 99990;
+  transition: 0.4s ease-in !important;
+}
+
+
+
+ul, li, a .padding-nav {
+  padding: 0px 10px !important;
+}
+
+
+
+/* Menu Mobile */
+@media screen and (max-width: 999px){
+  .esconder-mobile{
+    display: none;
+  }
+
+  .btn-abrir-menu i{
+    display: block !important;
+  }
+}
+
+.menu-mobile{
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 99999;
+  background-color: #1E1E1E;
+  height: 100vh;
+  width: 0vw;
+  overflow: hidden;
+  transition: .5s;
+}
+
+.menu-mobile.abrir-menu{
+  width: 70vw;
+}
+
+.btn-fechar{
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.btn-abrir-menu{
+  /* position: absolute;
+  top: 0;
+  right: 0; */
+  /* padding: 25px 30px; */
+  transition: 0.3s ease-in;
+}
+
+.btn-abrir-menu i {
+  color: #fff;
+  font-size: 40px;
+  display: none;
+  text-align: right;
+}
+
+
+.menu-mobile.abrir-menu ~ .overlay-menu{
+  display: block;
+}
+
+.menu-mobile .btn-fechar{
+  padding: 30px 40px;
+}
+
+.menu-mobile .btn-fechar i{
+  color: #FFF;
+  font-size: 35px;
+  text-align: right;
+  /* cursor: pointer; */
+}
+
+nav.menu-mobile ul{
+  flex-direction: column;
+  text-align: right;
+  padding: 60px 20px !important;
+}
+
+nav.menu-mobile  ul li{
+  padding: 20px 0px !important;
+  justify-content: space-around;
+}
+
+nav.menu-mobile  ul li a{
+  display: block;
+  font-family: "Montserrat";
+  color: #FFF;
+  font-size: 13px;
+  text-align: right;
+  align-items: end;
+  justify-content: space-between;
+  transition: 0.4s;
+}
+
+nav.menu-mobile  ul li a:hover{
+  background-color: #FFF;
+  border-radius: 10px;
+  /* color: #1b5b5f; */
+}
+
+.overlay-menu{
+  display: none;
+  background-color: #00000099;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99990;
+}
+
+/* Itens Navbar Collapse */
+
+
+
+/* #navbarsExample07 {
+  background-color: #b0aeae !important;
+  width: 35vw;
+  padding: 10px;
+} */
+
+#navbarsExample07 ul li a {
+  text-align: end !important;
+}
+
+/* Fim Intens Navbar Collapse */
+
+
+
+
+/* Itens Nabar */
+
+#ulnav{
+  align-content: end !important;
+}
+
+#ulnav li a {
+  transition: .3s;
+  display: block;
+  position: relative;
+  padding: 0px 8px;
+  margin: 5px;
+  /* font-weight: 200 !important; */
+}
+
+/* #ulnav:hover li a{
+  opacity: 0.7;
+} */
+
+#ulnav li a:hover {
+  /* transform: scale(1.1); */
+  opacity: 1;
+  color: #fff;
+}
+
+#ulnav li a::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 10%;
+  background-color: #fff;
+  z-index: -1;
+  transform-origin: right;
+  transform: scaleX(0);
+  border-radius: 3px;
+  transition: .4s;
+  /* box-shadow: 1px 0px 1px 0px #2c2b2b5e; */
+
+}
+
+#ulnav li a:hover::before {
+  transform-origin: left;
+  /*Lado onde a animação começa*/
+  transform: scaleX(1);
+  transition: transform .4s;
+}
+
+/* Fim Itens do Navbar */
+
+
+/* Navbar Scroll */
+
+nav.rolagem {
+  opacity: 0.9;
+  background-color: #1e1e1e !important;
+  height: auto;
+  transition: 0.4s ease-in !important;
+  padding: 10px 30px !important;
+  box-shadow: 0px 0px 5px 0px #2c2b2b5e;
+  /* opacity: 0.8; */
+  /* padding: 30px  !important; */
+  /* background: linear-gradient(#1E1E1E, #373737); */
+  /* border-bottom: #ffffff solid 1px; */
+}
+
+nav.rolagem ul li a {
+  color: #ffffff !important;
+  padding-block: 10px;
+}
+
+nav.rolagem ul li a:hover {
+  color: #fff !important;
+  padding-block: 10px;
+  /* font-weight: 200 !important; */
+}
+
+
+nav.rolagem li a {
+  transition: .3s;
+  display: block;
+  position: relative;
+  padding: 0px 8px;
+  margin: 5px;
+}
+
+/* #ulnav:hover li a{
+  opacity: 0.7;
+} */
+
+nav.rolagem li a:hover {
+  /* transform: scale(1.1); */
+  /* font-weight: 200 !important; */
+  opacity: 1;
+  color: #FDB724;
+
+}
+
+nav.rolagem li a::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 10%;
+  background-color: #FDB724 !important;
+  z-index: -1;
+  transform-origin: right;
+  transform: scaleX(0);
+  border-radius: 3px;
+  transition: .4s;
+}
+
+nav.rolagem li a:hover::before {
+  transform-origin: left;
+  /*Lado onde a animação começa*/
+  transform: scaleX(1);
+  transition: transform .4s;
+}
+
+nav.rolagem .btn-abrir-menu{
+  /* padding: 25px 20px; */
+  align-items: center !important;
+  transition: 0.4s ease-in-out;
+}
+
+
+/* Fim Navbar Scroll */
+
+
+
+/* Tela Inicial */
+#Incio section {
+  height: 100vh !important;
+}
+
+div .ondas {
+  position: relative;
+  width: 100%;
+  /* height: 100vh; */
+  animation: ondaAnimada 3s ease-in-out infinite alternate !important;
+  left: 0 !important;
+}
+
+/* Animções ondas */
+
+
+@keyframes ondaAnimada { /*Move as ondas para cima e para baixo*/
+  0% {
+    transform: translateY(-80px);
+  }
+
+  100% {
+    transform: translateY(-100px);
+  }
+}
+
+.onda1 {
+  width: 100% !important;
+  height: 500px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0 !important;
+  background-image: url(/img/bluewave2.png);
+  background-size: 2000px 500px;
+  /* transform: translateY(-30%) !important;  */
+  /* opacity: 0.8; */
+}
+
+.onda2 {
+  width: 100% !important;
+  height: 500px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0 !important;
+  background-image: url(/img/bluewave1.png);
+  background-size: 2000px 500px;
+  /* transform: translateY(-30%) !important;  */
+  opacity: 0.4;
+}
+
+.onda3 {
+  width: 100% !important;
+  height: 500px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0 !important;
+  background-image: url(/img/bluewave2.png);
+  background-size: 2000px 500px;
+  /* transform: translateY(-30%) !important;  */
+  opacity: 0.6;
+}
+
+.onda4 {
+  width: 100% !important;
+  height: 500px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0 !important;
+  background-image: url(/img/bluewave3.png);
+  background-size: 2000px 500px;
+  opacity: 0.6;
+  /* transform: translateY(-30%) !important;  */
+}
+
+
+
+/*  */
+
+@keyframes moveonda1 {
+  from {
+    transform: translateY(60px);
+  }
+}
+
+#onda1 {
+  z-index: 1000;
+  opacity: 1;
+  /* background-position-x: -100px; */
+  animation: moveonda1 10s ease-in-out infinite alternate;
+}
+
+
+/*  */
+
+
+
+@keyframes moveonda2 {
+  from {
+    transform: translateY(50px);
+  }
+}
+
+#onda2 {
+  z-index: 999;
+  opacity: 0.5;
+  /* background-position-x: -200px; */
+  animation: moveonda2 8s ease-in-out infinite alternate;
+}
+
+
+/*  */
+
+
+
+@keyframes moveonda3 {
+  from {
+    transform: translateY(40px);
+  }
+}
+
+#onda3 {
+  z-index: 998;
+  opacity: 0.6;
+  /* background-position-x: -300px; */
+  animation: moveonda3 6s ease-in-out infinite alternate;
+}
+
+
+/*  */
+
+
+
+@keyframes moveonda4 {
+  from {
+    transform: translateY(20px);
+  }
+}
+
+#onda4 {
+  z-index: 997;
+  opacity: 0.3;
+  /* background-position-x: -100px; */
+  animation: moveonda4 5s ease-in-out infinite alternate;
+  /* transform: translateZ(-100) !important; */
+}
+
+
+
+.mysvg {
+  position: absolute !important;
+  top: 0;
+  left: 0;
+  right: 0;
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 30px;
+}
+
+
+/* Conteudo da Tela Inicial */
+
+.herobk {
+  background-image: url(/img/init.jpg);
+  position: relative;
+  align-items: center !important;
+  background-attachment: fixed;
+  /*Efeito parallax */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.vertical {
+  position: relative;
+  margin: auto;
+  height: 100vh;
+  padding: 20px;
+  transform: translateY(40%);
+}
+
+.visit-card {
+  color: #fff !important;
+}
+
+
+/* Tipografia */
+
+.somos {
+  font-family: "aquus";
+  font-size: min(70px, 18vw) !important;
+  font-style: normal !important;  
+  text-align: center;
+  background: linear-gradient(180deg, #FFF 56.25%, rgba(255, 255, 255, 0.00) 100%);
+  background-clip: text;
+  mix-blend-mode: difference;
+  letter-spacing: min(30px, 3vw);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+
+/* Animação Maquina de Escrever */
+
+/* #typing {
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typing 3s steps(30, end), blink-caret 0.5s step-end infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #ffffff00;
+  }
+} */
+
+
+
+
+.txt-init {
+  font-size: min(17px, 4vw) !important;
+  font-family: "Montserrat";
+  font-weight: 200 !important;
+}
+
+.deslizeposition {
+  position: absolute;
+  bottom: 0;
+  z-index: 99999;
+  transform: translateY(-100px);
+}
+
+.deslizecont{
+  position: relative;
+  align-items: center !important;
+  justify-content: center;
+}
+
+
+.deslize {
+  color: #fff;
+  text-align: center;
+  font-family: "aquus", sans-serif;
+  font-size: min(30px, 8vw) !important;
+  letter-spacing: 4px;
+  animation: setaAnimada 1.5s ease-in-out infinite alternate !important;
+}
+
+.seta {
+  position: relative;
+  stroke: #000;
+  width: min(15px, 3.5vw) !important;
+  bottom: 0;
+  position: relative;
+  height: auto !important;
+  animation: setaAnimada 1.5s ease-in-out infinite alternate !important;
+  mix-blend-mode: difference !important;
+}
+
+@keyframes setaAnimada {
+  0% {
+    transform: translateY(5px);
+  }
+
+  100% {
+    transform: translateY(-5px);
+  }
+
+}
+
+
+
+
+
+
+.informativo {
+  text-align: left !important;
+  padding: 5rem;
+}
+
+.cotituloincio {
+
+  text-align: center !important;
+  font: 250 16px "Montserrat", sans-serif;
+  /* margin: 2rem; */
+  padding: 2rem;
+  width: 400px;
+  ;
+}
+
+
+
+.txt-animado {
+  font-family: aquus;
+  /* font-size: 80px; */
+  background: linear-gradient(180deg, #FFF 56.25%, rgba(255, 255, 255, 0.00) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  mix-blend-mode: difference;
+  letter-spacing: 30px;
+  transition: 0.5s !important;
+
+}
+
+.txt-animado span {
+  position: relative;
+  transition: 0.5s !important;
+
+}
+
+.txt-animado span::before {
+  content: "";
+  background: linear-gradient(180deg, #FFF 56.25%, rgba(255, 255, 255, 0.00) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  /* mix-blend-mode: difference; */
+  animation: words 11s infinite;
+}
+
+.txt-animado1 span::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  border-left: 3px solid #FDB724;
+  right: -10px;
+  animation: cursorinit 0.8s infinite, digitando 30s steps(10) infinite;
+  width: calc(100% + 50px);
+  background-color: rgba(0, 0, 0, 0.60);
+  background-clip: text;
+  /* -webkit-background-clip: text; */
+  -webkit-text-fill-color: transparent;
+  /* mix-blend-mode: difference; */
+
+}
+
+@keyframes digitando {
+  10%, 15%, 30%, 35%, 50%, 55%, 70%, 75%, 90%, 95% {
+    width: 0;
+  }
+
+  5%, 20%, 25%, 40%, 45%, 60%, 65%, 80%, 85% {
+    width: calc(100% + 50px);
+  }
+}
+
+@keyframes cursorinit {
+  0% {
+    border-left: 3px solid #1e1e1e;
+  }
+}
+
+
+@keyframes words {
+  0%, 50% {
+    content: "o Início.";
+  }
+
+  51%, 100% {
+    content: "uma Equipe.";
+  }
+}
+
+/* Tela Inicial Fim */
+
+
+
+
+
+
+
+
+
+/* O que fazemos / Serviços */
+
+#oquefazemos h5 {
+  width: 200px;
+}
+
+.onda-position {
+  position: relative !important;
+}
+
+.onda-light {
+  position: absolute;
+  bottom: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  /* rotate: 180px !important; */
+  transform: translateY(10%);
+  width: 100%;
+}
+
+.subtituloservicos {
+
+  font-family:"Montserrat";
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  padding-bottom: 15px;
+}
+
+.descricaoservicos {
+  width: 100%;
+  height: 100px;
+  text-align: left;
+  font-family:"Montserrat";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  padding: 5px;
+}
+
+.imgservicos {
+  width: 50px;
+  height: 50px;
+  flex-shrink: 0;
+}
+
+.btn-reedmore {
+  background-color: transparent !important;
+  transition: 0.3s;
+}
+
+.btn-reedmore:hover {
+  height: fit-content;
+  background-color: #FDB724 !important;
+  transition: 0.3s;
+}
+
+
+/* @keyframes outer-left {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: none;
+  }
+}
+
+@keyframes inner-left {
+  from {
+    transform: translateX(80%);
+  }
+  to {
+    transform: none;
+  }
+}
+
+.title-inner {
+  display: inline-block;
+  animation: inner-left 1s 1s ease both;
+} */
+
+
+
+
+
+
+.espaco-vertical {
+  height: 5vh !important;
+}
+
+.temaclaro {
+  color: #333 !important;
+  text-shadow: none !important;
+}
+
+.temaclaro a {
+  color: #333 !important;
+  text-shadow: none !important;
+}
+
+.temaescuro {
+  color: #fff !important;
+  text-shadow: none !important;
+}
+
+
+
+/* Tela inicial */
+
+
+
+#navbar ul li a {
+
+  text-align: center;
+  font: 300 13px/30px "Montserrat", sans-serif;
+  position: relative;
+}
+
+
+.projet-center {
+  margin: 4vh !important;
+}
+
+
+
+/* Portifolio */
+
+section.portifolio .flex {
+  justify-content: space-around !important;
+  gap: 25px;
+}
+
+.textura {
+  background-image: url(/img/textura.png);
+  background-attachment: fixed;
+}
+
+.flex {
+  display: flex;
+}
+
+.img-porrt {
+  /* height: 400px;
+  width: 400px !important; */
+  /* background-color: #0000008e; */
+  /* background-position: 0% 100%; */
+  border-radius: 25px;
+  background-size: cover;
+  box-shadow: 0px 0px 7px 1px #0000004b;
+  position: relative;
+}
+
+.btn-projetos {
+  /* border: #1E1E1E solid 2px !important; */
+  background-color: #FDB724;
+  color: #1E1E1E;
+}
+
+/* .btn-projetos:hover {
+  background-color: #1E1E1E;
+  color: #FDB724 !important;
+} */
+
+
+
+
+.sectionprojetos{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.sectionprojetos ul{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.sectionprojetos ul li{
+  font: inherit;
+  list-style: none;
+  color: #000000;
+  border: transparent solid 2px !important;
+  cursor: pointer;
+  text-transform: uppercase;
+  margin: 2px;
+  padding: 5px !important;
+  letter-spacing: 1px;
+  border-radius: 5px;
+  background-color: #d8d8d8;
+}
+
+.sectionprojetos ul li:hover{
+  border: #1E1E1E solid 2px !important;
+  background-color: #FDB724;
+  color: #000;
+  transition: .5s
+}
+
+.sectionprojetos ul li.active{
+  background-color: #1E1E1E;
+  color: #FDB724;
+  transition: 0.3s !important;
+}
+
+.sectionprojetos  ul li i.active{
+  color: #FDB724;
+}
+
+.sectionprojetos  ul li i{
+  padding: 0px !important;
+}
+
+
+
+/* Cards de cada projeto */
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #0000002f;
+  border-radius: 5px;
+  font-weight: 600;
+  color: #fff;
+  padding: 30px;
+  opacity: 1;
+  transition: .5s;
+  
+}
+
+.overlay:hover {
+  opacity: 1;
+}
+
+.projetos{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  transition: .5s !important;
+}
+
+.projetos .projeto{
+  position: relative;
+  display: block;
+  width: 250px;
+  /* height: 400px; */
+  margin: 5px;
+  margin-bottom: 10px;
+  transition: .5s !important;
+  border-radius: 5px;
+  box-shadow: 6px 0px 10px 1px #b1b0b03e;
+
+}
+
+.projetos .projeto.hide{
+  display: none;
+}
+
+.projetos .projeto img{
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 5px;
+  transition: .5s;
+}
+
+.image {
+  position: relative;
+  background-size: cover;
+  background-position: 50% 0%;
+  border-radius: 5px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 350px;
+  transition: 2s;
+}
+
+.image:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 1;
+  /* background: url(http://lorempixel.com/300/200); */
+  /* background-color: #00000067; */
+  background-size: 100% 100%;
+  border-radius: 5px;
+  transition: all .3s;
+}
+
+.image:hover:before {
+  background-color: #00000071;
+  border-radius: 5px;
+  opacity: 0.8;
+}
+
+
+.relative{
+  opacity: 0;
+  transition: 0.3s;
+  width: 100%;
+  height: 100%;
+}
+
+.relative:hover{
+  opacity: 1;
+}
+
+/* Mostrar titulos quando a tela for menos que 999px */
+@media screen and (max-width: 900px) {
+  .relative{
+    opacity: 1;
+  }
+}
+
+.ptitle {
+  font-size: 22px;
+  font-weight: bold;
+  text-align: left;
+}
+
+.pauthor {
+  font-size: 14px;
+  font-weight: 300;
+  margin-top: auto;
+  text-align: left;
+}
+
+.plink {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  text-align: left;
+}
+
+.pbody {
+  position: absolute;                  
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  padding: 30px 30px;
+  color: #fff;
+  display: flex;
+  flex-direction: column
+}
+
+.ptag {
+  background-color: rgba(236, 236, 236, 0.8);
+  color: #000;  
+  font-weight: 400 !important;
+  border-radius: 5px;
+  padding: 5px 15px;
+  margin-bottom: 5px;
+  text-align: left;
+}
+
+.planosauto {
+  margin-top: auto;
+  position: relative;
+}
+
+
+.projeto-size {
+  width: 177px !important;
+  height: 177px !important;
+}
+
+.portifolio-costum {
+  max-width: 600px !important;
+}
+
+
+
+/* .btn-projetos{
+  background-color: #1E1E1E;
+  color: #FDB724 !important;
+} */
+
+
+
+
+/* Galeria */
+
+
+/* Tipografia */
+
+.galeria {
+  color: #2C2B2B;
+  font-family:"Montserrat";
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  padding-bottom: 20px;
+}
+
+.galeriasubtitulos {
+  color: #2C2B2B;
+  font-family:"Montserrat";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  padding-bottom: 20px;
+}
+
+
+/* Universais Galeria */
+
+.rowpersona {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+  flex: 25% !important;
+  max-width: 30% !important;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  /* width: 100%; */
+}
+
+/* Aplica um deslocamento vertical de 20px nas colunas 2 e 4 */
+.custom-offset {
+  position: relative;
+  margin-top: -20px !important;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  .column {
+    flex: 20%;
+    max-width: 20%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+
+/* Fim Univiversais Galeria */
+
+
+
+/* Estilização cards/img separadamente */
+
+
+
+.cardsgaleria {
+  border-radius: 5px;
+}
+
+.cardsgaleriavari {
+  max-height: auto;
+  border-radius: 5px;
+}
+
+
+
+/* Animações Cards Galeria */
+
+/* Definindo a animação para mover para cima e para baixo */
+@keyframes moveUpDown {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px); /* Ajuste a distância vertical conforme necessário */
+  }
+}
+
+/* Aplicando a animação a cada coluna separadamente com atrasos */
+.coluna1 {
+  animation: moveUpDown 3s ease-in-out infinite alternate;
+  animation-delay: 0s; /* Ajuste o atraso conforme necessário para a primeira coluna */
+}
+
+.coluna2 {
+  animation: moveUpDown 3s ease-in-out infinite alternate;
+  animation-delay: 0.2s; /* Ajuste o atraso conforme necessário para a segunda coluna */
+}
+
+.coluna3 {
+  animation: moveUpDown 3s ease-in-out infinite alternate;
+  animation-delay: 0.4s; /* Ajuste o atraso conforme necessário para a terceira coluna */
+}
+
+.coluna4 {
+  animation: moveUpDown 3s ease-in-out infinite alternate;
+  animation-delay: 0.6s; /* Ajuste o atraso conforme necessário para a quarta coluna */
+}
+
+.coluna5 {
+  animation: moveUpDown 3s ease-in-out infinite alternate;
+  animation-delay: 0.8s; /* Ajuste o atraso conforme necessário para a quinta coluna */
+}
+
+/* Fim Galeria */
+
+
+
+/* Planos e preços*/
+
+.planosbk {
+  background-image: url(/img/servicos.png) !important;
+  background-attachment: fixed;
+}
+
+.planosline {
+  /* display: flex; */
+  gap: 20px;
+}
+
+#explicativoplanos p h5 {
+  color: #ffffff !important;
+}
+
+.infoplanos {
+  flex-direction: column;
+  margin-left: -20px;
+  text-align: left;
+}
+
+
+/* Media query para ajustar os cards em telas menores */
+@media screen and (max-width: 768px) {
+  .cardplanos, .plano {
+    width: calc(50% - 20px);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .cardplanos, .plano {
+    width: calc(100% - 20px);
+  }
+}
+
+/* Fim Media Query */
+
+.sectionplanos{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  transition: .5s !important;
+  font: inherit;
+  font-family:"Montserrat";
+
+}
+
+.sectionplanos .plano{
+  position: relative;
+  display: block;
+  color: #FFF;
+  width: 260px !important;
+  backdrop-filter: blur(8px) !important;
+  background-color: #ffffff05 !important;
+  border-top: 4px solid #FFF;
+  border-radius: 0 15px 10px 10px;
+  /* margin-right: 15px; */
+  margin-bottom: 50px;
+}
+
+/* Efeito esmaecer na base do conteudo do card (inativo) */
+.conteudoplanos{
+  position: relative;
+  overflow: hidden;
+  height: 250px;
+  color: #FFF;
+  padding: 20px;
+  text-align: left;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 12px;
+}
+
+.conteudoplanos::before{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 260px;
+  height: 100px;
+  background: linear-gradient(transparent, #0C1427);
+}
+/*  */
+
+
+/* PLanos e Preços Cards */
+.contplanos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around !important;
+  align-items: flex-start;
+  max-width: 100%;
+}
+
+.cardplanos {
+  display: block;
+  flex-direction: column;
+  width: calc(25% - 20px);
+  min-width: 190px;
+  transition: all 0.4s;
+}
+
+.cardplanos:hover {
+  cursor: pointer;
+  transition: all 0.4s;
+}
+
+.contentplanos {
+  overflow: hidden;
+  max-height: 190px; /* Altura inicial do conteúdo */
+  transition: max-height 0.4s ease; /* Transição suave ao expandir/retrair */
+  padding: 10px;
+  margin: 10px;
+}
+
+
+.contentplanos li{
+  margin-bottom: 8px;
+  line-height: normal;
+  font-size: 13px;
+  text-align: left;
+  list-style: disc;
+}
+
+
+/* Classes tipografia e alinhamento*/
+
+.headplanos {
+  color: #FFF;
+  text-align: center;
+  height: 124px;
+}
+
+.nomeplanos {
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin-top: 15px;
+}
+
+.precoplanos {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin: 0px !important;
+}
+
+.tipoplanos {
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  margin: 0px !important;
+}
+
+.beneficiosplanos {
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 25px;
+  padding: 10px;
+}
+
+.rodapeplanos {
+  border-top: solid 3px #fff !important;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  margin: 0px 5px;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 250px;
+  font-size: 15px;
+  transition: 0.3s;
+  padding: 20px;
+  height: 80px;
+}
+
+.button-group {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.read-more {
+  font-size: 14px;
+  background-color: transparent;
+  color: #fff;
+  border: none;
+  border-radius: 0px;
+  padding: 5px 13px;
+  cursor: pointer;
+  margin-right: 5px; /* Espaçamento entre os botões */
+  width: fit-content;
+  transition: .3s;
+}
+
+
+.other-button {
+  font-size: 14px;
+  background-color: transparent;
+  color: #fff;
+  border: none;
+  border-left: 2px solid #9796964d;
+  border-radius: 0px;
+  padding: 5px 13px;
+  cursor: pointer;
+  margin-left: 5px; /* Espaçamento entre os botões */
+  border-bottom: 2px transparent solid;
+  width: fit-content;
+  transition: .3s;
+}
+
+.other-buttonn {
+  font-size: 14px;
+  background-color: transparent;
+  color: #fff;
+  border: none;
+  /* border-left: 2px solid transparent; */
+  border-radius: 0px;
+  padding: 5px 13px;
+  cursor: pointer;
+  margin-left: 5px; /* Espaçamento entre os botões */
+  border-bottom: 2px transparent solid;
+  width: fit-content;
+  transition: .3s;
+}
+
+/* Quem Somos */
+
+.quemsomosimg {
+  /* max-height: 300px !important; */
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* margin-bottom: 15px; */
+}
+
+.quemsomosr {
+  background-image: url(/img/quemsomosrodrigo5.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.sobre-nos{
+  width: auto;
+  max-height: 170px;
+  text-align: left; 
+  font-size: 13px;
+  font-weight: 400;
+  padding: 0px 10px 0px 0px;
+  overflow: hidden;
+  transition: max-height 0.9s ease-in !important; /* Adiciona uma transição suave */
+}
+
+.lerMaisBtn{
+  text-decoration: none !important;
+  height: 25px;
+  background-color: #1e1e1e;
+  border-radius: 3px;
+  color: #FFF !important;
+  transition: 0.2s !important;
+}
+
+.lerMaisBtn:hover{
+  background-color: #FDB724;
+  border-radius: 3px;
+  color: #000 !important;
+}
+
+.lerMaisSobre{
+  cursor: pointer;
+  position: absolute;
+  bottom: 10px;
+  right: 0;
+  font-size: 13px;
+  font-weight: 500;
+  padding: 2px 10px;
+}
+
+.icone-ancora i{
+  color: #000000 !important;
+}
+
+.icone-ancora i:hover{
+  color: #ffb005 !important;
+}
+
+.expandido {
+  max-height: none; /* Mostra o texto completo quando a classe "expandido" é aplicada */
+}
+
+/* Estilização básica */
+.image-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.icon-container {
+  cursor: pointer;
+  
+  border-radius: 5px;
+  align-items: center;
+  top: 0;
+  transition: 0.1s ease-in-out; /* Transição suave */
+}
+
+/* Estiliza o ícone */
+.icon-container i {
+  padding: 0px 10px;
+  font-size: 24px; /* Ajuste o tamanho conforme necessário */
+  color: #000; /* Cor do ícone */
+}
+
+/* Quando o mouse está sobre a imagem, mostra o ícone */
+.sobre-container:hover .icon-container {
+  visibility: visible;
+  right: 0;
+  top: 0; /* Posição após a transição */
+  transition: bottom 0.3s ease-in-out; /* Transição suave */
+
+}
+
+
+/* Fale conosco e Formulario de Email */
+
+.contfaleconosco{
+  background: radial-gradient(rgb(27, 73, 87), rgb(1, 21, 28));
+    color: rgb(230, 230, 230);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.formulario-email{
+  background-color: #fff !important;
+  color: #000 !important;
+}
+
+.formulario-email h1 p{
+  color: #000 !important;
+  margin-bottom: 15px;
+}
+
+.formulario-email{
+  background-color: #ebf1f1;
+}
+
+.formulario-email label{
+  color: #000;
+}
+
+.formulario-email textarea,
+.formulario-email input {
+  font: inherit;
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  transition: 0.3s;
+  color: #000;
+}
+
+.formulario-email textarea {
+  min-height: 10rem;
+  resize: vertical;
+}
+
+.formulario-email button {
+  display: block;
+  font: inherit;
+  text-transform: uppercase;
+  cursor: pointer;
+  background-color: #1E1E1E;
+}
+
+.formulario-email input:hover,
+.formulario-email input:focus,
+.formulario-email textarea:hover,
+.formulario-email textarea:focus {
+  border-color: #048f99;
+  box-shadow: 0 0 0 1px #047999;
+}
+
+
+
+/* Rodapé */
+
+i {
+  padding-right: 10px !important;
+}
+
+.incept {
+  text-align: center;
+  font-family:"Montserrat";
+  font-size: 16px;
+  /* font-style: italic; */
+  font-weight: 600;
+  line-height: normal;
+}
+
+.direitosreservados { 
+  font-family:"Montserrat";
+  font-size: 16px;
+  /* font-style: italic; */
+  font-weight: 300;
+  line-height: normal;
+}
+
+.rodapestyle {
+  background-color: #1E1E1E;
+  color: #ffffff !important;
+}
+
+.rodapestyle h5 {
+  padding: 0px !important;
+  font-size: 17px;
+}
+
+.rodapestyle ul {
+  padding: 0px !important;
+}
+
+.rodapestyle ul li {
+  padding: 0px !important;
+  font-size: 14px;
+}
+
+.rodapestyle ul li a {
+  color: #ffffff !important;
+  transition: 0.3s;
+  border-bottom: 2px transparent solid;
+  width: max-content;
+}
+
+.rodapestyle ul li a:hover {
+  color: #FDB724 !important;
+  transform: scaleX(1) !important;
+  transition: 0.3s;
+  border-bottom: 2px #FDB724 solid;
+  width: max-content;
+}
+
+.rodapestyle ul h5 {
+  margin-bottom: 1.5rem !important;
+}
+
+.icon-social i {
+  font-size: 28px;
+}
+
+/* Rodapé */

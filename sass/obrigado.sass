@@ -1,0 +1,1306 @@
+
+.firefly {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  width: 0.4vw;
+  height: 0.4vw;
+  margin: -0.2vw 0 0 9.8vw;
+  animation: ease 200s alternate infinite;
+  pointer-events: none;
+}
+.firefly::before, .firefly::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  transform-origin: -10vw;
+}
+.firefly::before {
+  background: black;
+  opacity: 0.4;
+  animation: drift ease alternate infinite;
+}
+.firefly::after {
+  background: white;
+  opacity: 0;
+  box-shadow: 0 0 0vw 0vw yellow;
+  animation: drift ease alternate infinite, flash ease infinite;
+}
+
+.firefly:nth-child(1) {
+  animation-name: move1;
+}
+.firefly:nth-child(1)::before {
+  animation-duration: 18s;
+}
+.firefly:nth-child(1)::after {
+  animation-duration: 18s, 8392ms;
+  animation-delay: 0ms, 6896ms;
+}
+
+@keyframes move1 {
+  0% {
+    transform: translateX(35vw) translateY(-25vh) scale(0.84);
+  }
+  3.8461538462% {
+    transform: translateX(-49vw) translateY(0vh) scale(0.43);
+  }
+  7.6923076923% {
+    transform: translateX(-25vw) translateY(35vh) scale(0.47);
+  }
+  11.5384615385% {
+    transform: translateX(-17vw) translateY(18vh) scale(0.71);
+  }
+  15.3846153846% {
+    transform: translateX(40vw) translateY(-13vh) scale(0.94);
+  }
+  19.2307692308% {
+    transform: translateX(-21vw) translateY(-5vh) scale(0.86);
+  }
+  23.0769230769% {
+    transform: translateX(38vw) translateY(26vh) scale(0.79);
+  }
+  26.9230769231% {
+    transform: translateX(8vw) translateY(-37vh) scale(0.93);
+  }
+  30.7692307692% {
+    transform: translateX(-24vw) translateY(-5vh) scale(0.65);
+  }
+  34.6153846154% {
+    transform: translateX(47vw) translateY(-33vh) scale(0.81);
+  }
+  38.4615384615% {
+    transform: translateX(16vw) translateY(41vh) scale(0.38);
+  }
+  42.3076923077% {
+    transform: translateX(-15vw) translateY(-33vh) scale(0.63);
+  }
+  46.1538461538% {
+    transform: translateX(-14vw) translateY(-5vh) scale(1);
+  }
+  50% {
+    transform: translateX(-27vw) translateY(34vh) scale(0.81);
+  }
+  53.8461538462% {
+    transform: translateX(16vw) translateY(-4vh) scale(0.99);
+  }
+  57.6923076923% {
+    transform: translateX(-44vw) translateY(-16vh) scale(0.42);
+  }
+  61.5384615385% {
+    transform: translateX(-13vw) translateY(27vh) scale(0.54);
+  }
+  65.3846153846% {
+    transform: translateX(-36vw) translateY(-33vh) scale(0.5);
+  }
+  69.2307692308% {
+    transform: translateX(-23vw) translateY(7vh) scale(0.82);
+  }
+  73.0769230769% {
+    transform: translateX(-24vw) translateY(4vh) scale(0.63);
+  }
+  76.9230769231% {
+    transform: translateX(-28vw) translateY(-24vh) scale(0.37);
+  }
+  80.7692307692% {
+    transform: translateX(50vw) translateY(44vh) scale(0.39);
+  }
+  84.6153846154% {
+    transform: translateX(-15vw) translateY(-37vh) scale(0.51);
+  }
+  88.4615384615% {
+    transform: translateX(-15vw) translateY(-47vh) scale(0.41);
+  }
+  92.3076923077% {
+    transform: translateX(-39vw) translateY(8vh) scale(0.29);
+  }
+  96.1538461538% {
+    transform: translateX(-33vw) translateY(-29vh) scale(0.37);
+  }
+  100% {
+    transform: translateX(14vw) translateY(38vh) scale(0.56);
+  }
+}
+.firefly:nth-child(2) {
+  animation-name: move2;
+}
+.firefly:nth-child(2)::before {
+  animation-duration: 16s;
+}
+.firefly:nth-child(2)::after {
+  animation-duration: 16s, 6647ms;
+  animation-delay: 0ms, 4103ms;
+}
+
+@keyframes move2 {
+  0% {
+    transform: translateX(-33vw) translateY(37vh) scale(0.35);
+  }
+  3.8461538462% {
+    transform: translateX(11vw) translateY(-16vh) scale(0.45);
+  }
+  7.6923076923% {
+    transform: translateX(41vw) translateY(-24vh) scale(0.36);
+  }
+  11.5384615385% {
+    transform: translateX(35vw) translateY(-34vh) scale(0.92);
+  }
+  15.3846153846% {
+    transform: translateX(37vw) translateY(41vh) scale(0.66);
+  }
+  19.2307692308% {
+    transform: translateX(-28vw) translateY(28vh) scale(0.86);
+  }
+  23.0769230769% {
+    transform: translateX(24vw) translateY(10vh) scale(0.57);
+  }
+  26.9230769231% {
+    transform: translateX(-19vw) translateY(16vh) scale(0.33);
+  }
+  30.7692307692% {
+    transform: translateX(-9vw) translateY(-18vh) scale(0.65);
+  }
+  34.6153846154% {
+    transform: translateX(3vw) translateY(41vh) scale(0.82);
+  }
+  38.4615384615% {
+    transform: translateX(34vw) translateY(29vh) scale(0.44);
+  }
+  42.3076923077% {
+    transform: translateX(37vw) translateY(6vh) scale(0.93);
+  }
+  46.1538461538% {
+    transform: translateX(-43vw) translateY(-6vh) scale(0.9);
+  }
+  50% {
+    transform: translateX(34vw) translateY(26vh) scale(0.82);
+  }
+  53.8461538462% {
+    transform: translateX(4vw) translateY(8vh) scale(0.73);
+  }
+  57.6923076923% {
+    transform: translateX(5vw) translateY(33vh) scale(0.44);
+  }
+  61.5384615385% {
+    transform: translateX(48vw) translateY(15vh) scale(0.78);
+  }
+  65.3846153846% {
+    transform: translateX(26vw) translateY(11vh) scale(0.49);
+  }
+  69.2307692308% {
+    transform: translateX(23vw) translateY(-11vh) scale(0.93);
+  }
+  73.0769230769% {
+    transform: translateX(5vw) translateY(-31vh) scale(0.45);
+  }
+  76.9230769231% {
+    transform: translateX(38vw) translateY(-18vh) scale(0.95);
+  }
+  80.7692307692% {
+    transform: translateX(-46vw) translateY(-48vh) scale(0.5);
+  }
+  84.6153846154% {
+    transform: translateX(-27vw) translateY(-18vh) scale(0.55);
+  }
+  88.4615384615% {
+    transform: translateX(1vw) translateY(-36vh) scale(0.86);
+  }
+  92.3076923077% {
+    transform: translateX(-42vw) translateY(35vh) scale(0.89);
+  }
+  96.1538461538% {
+    transform: translateX(-32vw) translateY(39vh) scale(0.61);
+  }
+  100% {
+    transform: translateX(-5vw) translateY(-38vh) scale(0.42);
+  }
+}
+.firefly:nth-child(3) {
+  animation-name: move3;
+}
+.firefly:nth-child(3)::before {
+  animation-duration: 14s;
+}
+.firefly:nth-child(3)::after {
+  animation-duration: 14s, 10105ms;
+  animation-delay: 0ms, 7855ms;
+}
+
+@keyframes move3 {
+  0% {
+    transform: translateX(-46vw) translateY(-28vh) scale(0.7);
+  }
+  3.8461538462% {
+    transform: translateX(-16vw) translateY(-22vh) scale(0.88);
+  }
+  7.6923076923% {
+    transform: translateX(-17vw) translateY(3vh) scale(0.78);
+  }
+  11.5384615385% {
+    transform: translateX(11vw) translateY(26vh) scale(0.7);
+  }
+  15.3846153846% {
+    transform: translateX(-7vw) translateY(36vh) scale(0.56);
+  }
+  19.2307692308% {
+    transform: translateX(32vw) translateY(28vh) scale(0.8);
+  }
+  23.0769230769% {
+    transform: translateX(-47vw) translateY(-41vh) scale(0.87);
+  }
+  26.9230769231% {
+    transform: translateX(-24vw) translateY(15vh) scale(0.38);
+  }
+  30.7692307692% {
+    transform: translateX(-34vw) translateY(-48vh) scale(0.82);
+  }
+  34.6153846154% {
+    transform: translateX(11vw) translateY(-43vh) scale(0.73);
+  }
+  38.4615384615% {
+    transform: translateX(-32vw) translateY(37vh) scale(0.64);
+  }
+  42.3076923077% {
+    transform: translateX(32vw) translateY(-18vh) scale(0.59);
+  }
+  46.1538461538% {
+    transform: translateX(-30vw) translateY(-14vh) scale(0.74);
+  }
+  50% {
+    transform: translateX(-11vw) translateY(-33vh) scale(0.6);
+  }
+  53.8461538462% {
+    transform: translateX(-13vw) translateY(-45vh) scale(1);
+  }
+  57.6923076923% {
+    transform: translateX(27vw) translateY(-33vh) scale(0.35);
+  }
+  61.5384615385% {
+    transform: translateX(-42vw) translateY(-15vh) scale(0.35);
+  }
+  65.3846153846% {
+    transform: translateX(37vw) translateY(2vh) scale(0.34);
+  }
+  69.2307692308% {
+    transform: translateX(-16vw) translateY(-20vh) scale(0.94);
+  }
+  73.0769230769% {
+    transform: translateX(43vw) translateY(4vh) scale(0.78);
+  }
+  76.9230769231% {
+    transform: translateX(-26vw) translateY(28vh) scale(0.64);
+  }
+  80.7692307692% {
+    transform: translateX(19vw) translateY(-47vh) scale(0.47);
+  }
+  84.6153846154% {
+    transform: translateX(20vw) translateY(-28vh) scale(0.43);
+  }
+  88.4615384615% {
+    transform: translateX(10vw) translateY(-27vh) scale(0.73);
+  }
+  92.3076923077% {
+    transform: translateX(16vw) translateY(2vh) scale(0.79);
+  }
+  96.1538461538% {
+    transform: translateX(-2vw) translateY(-20vh) scale(0.91);
+  }
+  100% {
+    transform: translateX(-15vw) translateY(-14vh) scale(0.83);
+  }
+}
+.firefly:nth-child(4) {
+  animation-name: move4;
+}
+.firefly:nth-child(4)::before {
+  animation-duration: 15s;
+}
+.firefly:nth-child(4)::after {
+  animation-duration: 15s, 6316ms;
+  animation-delay: 0ms, 1523ms;
+}
+
+@keyframes move4 {
+  0% {
+    transform: translateX(-40vw) translateY(12vh) scale(0.72);
+  }
+  5.8823529412% {
+    transform: translateX(-4vw) translateY(-2vh) scale(0.45);
+  }
+  11.7647058824% {
+    transform: translateX(49vw) translateY(-30vh) scale(0.32);
+  }
+  17.6470588235% {
+    transform: translateX(-7vw) translateY(44vh) scale(0.47);
+  }
+  23.5294117647% {
+    transform: translateX(48vw) translateY(19vh) scale(0.58);
+  }
+  29.4117647059% {
+    transform: translateX(-7vw) translateY(-15vh) scale(0.62);
+  }
+  35.2941176471% {
+    transform: translateX(-29vw) translateY(31vh) scale(0.39);
+  }
+  41.1764705882% {
+    transform: translateX(42vw) translateY(-49vh) scale(0.68);
+  }
+  47.0588235294% {
+    transform: translateX(29vw) translateY(5vh) scale(0.71);
+  }
+  52.9411764706% {
+    transform: translateX(17vw) translateY(-40vh) scale(0.36);
+  }
+  58.8235294118% {
+    transform: translateX(30vw) translateY(4vh) scale(0.28);
+  }
+  64.7058823529% {
+    transform: translateX(39vw) translateY(-31vh) scale(0.27);
+  }
+  70.5882352941% {
+    transform: translateX(-37vw) translateY(-28vh) scale(0.44);
+  }
+  76.4705882353% {
+    transform: translateX(-36vw) translateY(23vh) scale(0.45);
+  }
+  82.3529411765% {
+    transform: translateX(-17vw) translateY(-49vh) scale(0.39);
+  }
+  88.2352941176% {
+    transform: translateX(-11vw) translateY(-14vh) scale(0.72);
+  }
+  94.1176470588% {
+    transform: translateX(41vw) translateY(-9vh) scale(0.33);
+  }
+  100% {
+    transform: translateX(14vw) translateY(19vh) scale(0.74);
+  }
+}
+.firefly:nth-child(5) {
+  animation-name: move5;
+}
+.firefly:nth-child(5)::before {
+  animation-duration: 11s;
+}
+.firefly:nth-child(5)::after {
+  animation-duration: 11s, 8033ms;
+  animation-delay: 0ms, 5207ms;
+}
+
+@keyframes move5 {
+  0% {
+    transform: translateX(-45vw) translateY(-47vh) scale(0.92);
+  }
+  4.1666666667% {
+    transform: translateX(49vw) translateY(45vh) scale(0.61);
+  }
+  8.3333333333% {
+    transform: translateX(37vw) translateY(-48vh) scale(0.4);
+  }
+  12.5% {
+    transform: translateX(-14vw) translateY(16vh) scale(0.97);
+  }
+  16.6666666667% {
+    transform: translateX(7vw) translateY(15vh) scale(0.97);
+  }
+  20.8333333333% {
+    transform: translateX(15vw) translateY(24vh) scale(0.98);
+  }
+  25% {
+    transform: translateX(20vw) translateY(44vh) scale(0.33);
+  }
+  29.1666666667% {
+    transform: translateX(29vw) translateY(38vh) scale(0.51);
+  }
+  33.3333333333% {
+    transform: translateX(16vw) translateY(44vh) scale(0.31);
+  }
+  37.5% {
+    transform: translateX(-14vw) translateY(8vh) scale(0.93);
+  }
+  41.6666666667% {
+    transform: translateX(-14vw) translateY(47vh) scale(0.58);
+  }
+  45.8333333333% {
+    transform: translateX(-34vw) translateY(34vh) scale(0.57);
+  }
+  50% {
+    transform: translateX(-3vw) translateY(-1vh) scale(0.96);
+  }
+  54.1666666667% {
+    transform: translateX(-8vw) translateY(-1vh) scale(0.37);
+  }
+  58.3333333333% {
+    transform: translateX(43vw) translateY(-45vh) scale(0.5);
+  }
+  62.5% {
+    transform: translateX(7vw) translateY(14vh) scale(0.28);
+  }
+  66.6666666667% {
+    transform: translateX(-32vw) translateY(-46vh) scale(0.65);
+  }
+  70.8333333333% {
+    transform: translateX(-2vw) translateY(7vh) scale(0.99);
+  }
+  75% {
+    transform: translateX(40vw) translateY(-2vh) scale(0.37);
+  }
+  79.1666666667% {
+    transform: translateX(-14vw) translateY(-27vh) scale(0.91);
+  }
+  83.3333333333% {
+    transform: translateX(-18vw) translateY(-26vh) scale(0.78);
+  }
+  87.5% {
+    transform: translateX(48vw) translateY(-34vh) scale(0.4);
+  }
+  91.6666666667% {
+    transform: translateX(-28vw) translateY(-30vh) scale(0.26);
+  }
+  95.8333333333% {
+    transform: translateX(41vw) translateY(-28vh) scale(0.73);
+  }
+  100% {
+    transform: translateX(8vw) translateY(-20vh) scale(0.67);
+  }
+}
+.firefly:nth-child(6) {
+  animation-name: move6;
+}
+.firefly:nth-child(6)::before {
+  animation-duration: 15s;
+}
+.firefly:nth-child(6)::after {
+  animation-duration: 15s, 5692ms;
+  animation-delay: 0ms, 6890ms;
+}
+
+@keyframes move6 {
+  0% {
+    transform: translateX(25vw) translateY(30vh) scale(0.69);
+  }
+  4% {
+    transform: translateX(-40vw) translateY(19vh) scale(0.96);
+  }
+  8% {
+    transform: translateX(13vw) translateY(-9vh) scale(0.32);
+  }
+  12% {
+    transform: translateX(-16vw) translateY(-38vh) scale(0.33);
+  }
+  16% {
+    transform: translateX(-39vw) translateY(13vh) scale(0.27);
+  }
+  20% {
+    transform: translateX(-9vw) translateY(-17vh) scale(0.4);
+  }
+  24% {
+    transform: translateX(-33vw) translateY(7vh) scale(0.26);
+  }
+  28% {
+    transform: translateX(37vw) translateY(-1vh) scale(0.73);
+  }
+  32% {
+    transform: translateX(39vw) translateY(13vh) scale(0.38);
+  }
+  36% {
+    transform: translateX(50vw) translateY(-47vh) scale(0.29);
+  }
+  40% {
+    transform: translateX(22vw) translateY(-41vh) scale(0.92);
+  }
+  44% {
+    transform: translateX(-22vw) translateY(-13vh) scale(0.99);
+  }
+  48% {
+    transform: translateX(-14vw) translateY(-40vh) scale(0.86);
+  }
+  52% {
+    transform: translateX(0vw) translateY(33vh) scale(0.29);
+  }
+  56% {
+    transform: translateX(3vw) translateY(-17vh) scale(0.9);
+  }
+  60% {
+    transform: translateX(-8vw) translateY(15vh) scale(0.87);
+  }
+  64% {
+    transform: translateX(-33vw) translateY(14vh) scale(0.41);
+  }
+  68% {
+    transform: translateX(27vw) translateY(-13vh) scale(0.48);
+  }
+  72% {
+    transform: translateX(-17vw) translateY(9vh) scale(0.36);
+  }
+  76% {
+    transform: translateX(-16vw) translateY(-22vh) scale(0.73);
+  }
+  80% {
+    transform: translateX(17vw) translateY(-10vh) scale(0.83);
+  }
+  84% {
+    transform: translateX(44vw) translateY(-5vh) scale(0.6);
+  }
+  88% {
+    transform: translateX(-15vw) translateY(18vh) scale(0.27);
+  }
+  92% {
+    transform: translateX(-4vw) translateY(-30vh) scale(0.41);
+  }
+  96% {
+    transform: translateX(45vw) translateY(41vh) scale(0.38);
+  }
+  100% {
+    transform: translateX(44vw) translateY(20vh) scale(0.91);
+  }
+}
+.firefly:nth-child(7) {
+  animation-name: move7;
+}
+.firefly:nth-child(7)::before {
+  animation-duration: 13s;
+}
+.firefly:nth-child(7)::after {
+  animation-duration: 13s, 10981ms;
+  animation-delay: 0ms, 4175ms;
+}
+
+@keyframes move7 {
+  0% {
+    transform: translateX(-40vw) translateY(-12vh) scale(0.8);
+  }
+  3.5714285714% {
+    transform: translateX(44vw) translateY(29vh) scale(0.96);
+  }
+  7.1428571429% {
+    transform: translateX(26vw) translateY(-14vh) scale(0.92);
+  }
+  10.7142857143% {
+    transform: translateX(50vw) translateY(43vh) scale(0.6);
+  }
+  14.2857142857% {
+    transform: translateX(-4vw) translateY(-4vh) scale(0.84);
+  }
+  17.8571428571% {
+    transform: translateX(46vw) translateY(34vh) scale(0.69);
+  }
+  21.4285714286% {
+    transform: translateX(12vw) translateY(-31vh) scale(0.62);
+  }
+  25% {
+    transform: translateX(22vw) translateY(-23vh) scale(0.6);
+  }
+  28.5714285714% {
+    transform: translateX(8vw) translateY(19vh) scale(0.4);
+  }
+  32.1428571429% {
+    transform: translateX(23vw) translateY(-48vh) scale(0.52);
+  }
+  35.7142857143% {
+    transform: translateX(32vw) translateY(18vh) scale(0.46);
+  }
+  39.2857142857% {
+    transform: translateX(43vw) translateY(-31vh) scale(1);
+  }
+  42.8571428571% {
+    transform: translateX(-25vw) translateY(-5vh) scale(0.37);
+  }
+  46.4285714286% {
+    transform: translateX(-33vw) translateY(15vh) scale(0.67);
+  }
+  50% {
+    transform: translateX(41vw) translateY(-11vh) scale(0.84);
+  }
+  53.5714285714% {
+    transform: translateX(21vw) translateY(45vh) scale(0.56);
+  }
+  57.1428571429% {
+    transform: translateX(-20vw) translateY(-34vh) scale(0.63);
+  }
+  60.7142857143% {
+    transform: translateX(47vw) translateY(-17vh) scale(0.39);
+  }
+  64.2857142857% {
+    transform: translateX(25vw) translateY(30vh) scale(0.42);
+  }
+  67.8571428571% {
+    transform: translateX(-26vw) translateY(42vh) scale(0.35);
+  }
+  71.4285714286% {
+    transform: translateX(21vw) translateY(-29vh) scale(0.35);
+  }
+  75% {
+    transform: translateX(15vw) translateY(-3vh) scale(0.83);
+  }
+  78.5714285714% {
+    transform: translateX(-17vw) translateY(18vh) scale(0.88);
+  }
+  82.1428571429% {
+    transform: translateX(13vw) translateY(-14vh) scale(0.55);
+  }
+  85.7142857143% {
+    transform: translateX(19vw) translateY(18vh) scale(0.61);
+  }
+  89.2857142857% {
+    transform: translateX(-7vw) translateY(43vh) scale(0.26);
+  }
+  92.8571428571% {
+    transform: translateX(12vw) translateY(-3vh) scale(0.52);
+  }
+  96.4285714286% {
+    transform: translateX(18vw) translateY(45vh) scale(0.59);
+  }
+  100% {
+    transform: translateX(35vw) translateY(34vh) scale(1);
+  }
+}
+.firefly:nth-child(8) {
+  animation-name: move8;
+}
+.firefly:nth-child(8)::before {
+  animation-duration: 13s;
+}
+.firefly:nth-child(8)::after {
+  animation-duration: 13s, 9737ms;
+  animation-delay: 0ms, 668ms;
+}
+
+@keyframes move8 {
+  0% {
+    transform: translateX(29vw) translateY(24vh) scale(0.26);
+  }
+  4.7619047619% {
+    transform: translateX(-23vw) translateY(44vh) scale(0.8);
+  }
+  9.5238095238% {
+    transform: translateX(40vw) translateY(36vh) scale(0.61);
+  }
+  14.2857142857% {
+    transform: translateX(44vw) translateY(44vh) scale(0.99);
+  }
+  19.0476190476% {
+    transform: translateX(-7vw) translateY(-40vh) scale(0.96);
+  }
+  23.8095238095% {
+    transform: translateX(40vw) translateY(16vh) scale(0.96);
+  }
+  28.5714285714% {
+    transform: translateX(-4vw) translateY(-1vh) scale(0.64);
+  }
+  33.3333333333% {
+    transform: translateX(-26vw) translateY(-7vh) scale(0.97);
+  }
+  38.0952380952% {
+    transform: translateX(36vw) translateY(24vh) scale(0.39);
+  }
+  42.8571428571% {
+    transform: translateX(-17vw) translateY(-46vh) scale(0.3);
+  }
+  47.619047619% {
+    transform: translateX(16vw) translateY(-12vh) scale(0.37);
+  }
+  52.380952381% {
+    transform: translateX(-43vw) translateY(-18vh) scale(0.93);
+  }
+  57.1428571429% {
+    transform: translateX(-15vw) translateY(39vh) scale(0.36);
+  }
+  61.9047619048% {
+    transform: translateX(24vw) translateY(-32vh) scale(0.26);
+  }
+  66.6666666667% {
+    transform: translateX(-39vw) translateY(30vh) scale(0.53);
+  }
+  71.4285714286% {
+    transform: translateX(35vw) translateY(-34vh) scale(0.27);
+  }
+  76.1904761905% {
+    transform: translateX(-18vw) translateY(-46vh) scale(0.39);
+  }
+  80.9523809524% {
+    transform: translateX(-6vw) translateY(19vh) scale(0.96);
+  }
+  85.7142857143% {
+    transform: translateX(0vw) translateY(-42vh) scale(0.88);
+  }
+  90.4761904762% {
+    transform: translateX(-12vw) translateY(-5vh) scale(0.48);
+  }
+  95.2380952381% {
+    transform: translateX(32vw) translateY(49vh) scale(0.71);
+  }
+  100% {
+    transform: translateX(4vw) translateY(13vh) scale(0.88);
+  }
+}
+.firefly:nth-child(9) {
+  animation-name: move9;
+}
+.firefly:nth-child(9)::before {
+  animation-duration: 14s;
+}
+.firefly:nth-child(9)::after {
+  animation-duration: 14s, 10572ms;
+  animation-delay: 0ms, 2619ms;
+}
+
+@keyframes move9 {
+  0% {
+    transform: translateX(11vw) translateY(-38vh) scale(0.27);
+  }
+  4.7619047619% {
+    transform: translateX(34vw) translateY(-12vh) scale(0.31);
+  }
+  9.5238095238% {
+    transform: translateX(7vw) translateY(41vh) scale(0.93);
+  }
+  14.2857142857% {
+    transform: translateX(-38vw) translateY(-5vh) scale(0.46);
+  }
+  19.0476190476% {
+    transform: translateX(48vw) translateY(-38vh) scale(0.33);
+  }
+  23.8095238095% {
+    transform: translateX(49vw) translateY(-40vh) scale(0.49);
+  }
+  28.5714285714% {
+    transform: translateX(43vw) translateY(-20vh) scale(0.68);
+  }
+  33.3333333333% {
+    transform: translateX(32vw) translateY(-23vh) scale(0.51);
+  }
+  38.0952380952% {
+    transform: translateX(-43vw) translateY(-35vh) scale(0.44);
+  }
+  42.8571428571% {
+    transform: translateX(-10vw) translateY(46vh) scale(0.4);
+  }
+  47.619047619% {
+    transform: translateX(23vw) translateY(41vh) scale(0.31);
+  }
+  52.380952381% {
+    transform: translateX(-29vw) translateY(-24vh) scale(0.99);
+  }
+  57.1428571429% {
+    transform: translateX(-34vw) translateY(-36vh) scale(0.87);
+  }
+  61.9047619048% {
+    transform: translateX(-27vw) translateY(4vh) scale(0.71);
+  }
+  66.6666666667% {
+    transform: translateX(-36vw) translateY(-4vh) scale(0.6);
+  }
+  71.4285714286% {
+    transform: translateX(-20vw) translateY(-25vh) scale(0.98);
+  }
+  76.1904761905% {
+    transform: translateX(6vw) translateY(-24vh) scale(0.76);
+  }
+  80.9523809524% {
+    transform: translateX(9vw) translateY(-33vh) scale(0.58);
+  }
+  85.7142857143% {
+    transform: translateX(-38vw) translateY(-13vh) scale(0.98);
+  }
+  90.4761904762% {
+    transform: translateX(-48vw) translateY(-2vh) scale(0.56);
+  }
+  95.2380952381% {
+    transform: translateX(18vw) translateY(30vh) scale(0.26);
+  }
+  100% {
+    transform: translateX(3vw) translateY(13vh) scale(0.89);
+  }
+}
+.firefly:nth-child(10) {
+  animation-name: move10;
+}
+.firefly:nth-child(10)::before {
+  animation-duration: 15s;
+}
+.firefly:nth-child(10)::after {
+  animation-duration: 15s, 6662ms;
+  animation-delay: 0ms, 6990ms;
+}
+
+@keyframes move10 {
+  0% {
+    transform: translateX(26vw) translateY(-31vh) scale(0.88);
+  }
+  5.8823529412% {
+    transform: translateX(11vw) translateY(-2vh) scale(0.71);
+  }
+  11.7647058824% {
+    transform: translateX(0vw) translateY(-23vh) scale(0.74);
+  }
+  17.6470588235% {
+    transform: translateX(43vw) translateY(-22vh) scale(0.62);
+  }
+  23.5294117647% {
+    transform: translateX(16vw) translateY(-39vh) scale(0.27);
+  }
+  29.4117647059% {
+    transform: translateX(-13vw) translateY(-10vh) scale(0.89);
+  }
+  35.2941176471% {
+    transform: translateX(22vw) translateY(-5vh) scale(0.69);
+  }
+  41.1764705882% {
+    transform: translateX(42vw) translateY(19vh) scale(0.64);
+  }
+  47.0588235294% {
+    transform: translateX(-43vw) translateY(21vh) scale(0.36);
+  }
+  52.9411764706% {
+    transform: translateX(41vw) translateY(37vh) scale(0.3);
+  }
+  58.8235294118% {
+    transform: translateX(7vw) translateY(2vh) scale(0.73);
+  }
+  64.7058823529% {
+    transform: translateX(-15vw) translateY(-22vh) scale(0.95);
+  }
+  70.5882352941% {
+    transform: translateX(-42vw) translateY(24vh) scale(0.42);
+  }
+  76.4705882353% {
+    transform: translateX(50vw) translateY(-21vh) scale(0.76);
+  }
+  82.3529411765% {
+    transform: translateX(-41vw) translateY(-29vh) scale(0.53);
+  }
+  88.2352941176% {
+    transform: translateX(-15vw) translateY(-45vh) scale(0.4);
+  }
+  94.1176470588% {
+    transform: translateX(-48vw) translateY(-46vh) scale(0.29);
+  }
+  100% {
+    transform: translateX(-37vw) translateY(-21vh) scale(0.9);
+  }
+}
+.firefly:nth-child(11) {
+  animation-name: move11;
+}
+.firefly:nth-child(11)::before {
+  animation-duration: 10s;
+}
+.firefly:nth-child(11)::after {
+  animation-duration: 10s, 10592ms;
+  animation-delay: 0ms, 2224ms;
+}
+
+@keyframes move11 {
+  0% {
+    transform: translateX(-34vw) translateY(35vh) scale(0.46);
+  }
+  5.8823529412% {
+    transform: translateX(-49vw) translateY(-12vh) scale(0.7);
+  }
+  11.7647058824% {
+    transform: translateX(25vw) translateY(6vh) scale(0.56);
+  }
+  17.6470588235% {
+    transform: translateX(5vw) translateY(39vh) scale(0.69);
+  }
+  23.5294117647% {
+    transform: translateX(-25vw) translateY(29vh) scale(0.63);
+  }
+  29.4117647059% {
+    transform: translateX(-43vw) translateY(1vh) scale(0.83);
+  }
+  35.2941176471% {
+    transform: translateX(-20vw) translateY(-30vh) scale(0.9);
+  }
+  41.1764705882% {
+    transform: translateX(44vw) translateY(44vh) scale(0.75);
+  }
+  47.0588235294% {
+    transform: translateX(-48vw) translateY(-38vh) scale(0.93);
+  }
+  52.9411764706% {
+    transform: translateX(-40vw) translateY(14vh) scale(0.51);
+  }
+  58.8235294118% {
+    transform: translateX(-14vw) translateY(40vh) scale(0.38);
+  }
+  64.7058823529% {
+    transform: translateX(34vw) translateY(-27vh) scale(0.41);
+  }
+  70.5882352941% {
+    transform: translateX(3vw) translateY(-23vh) scale(0.37);
+  }
+  76.4705882353% {
+    transform: translateX(-40vw) translateY(9vh) scale(0.75);
+  }
+  82.3529411765% {
+    transform: translateX(21vw) translateY(23vh) scale(0.78);
+  }
+  88.2352941176% {
+    transform: translateX(-2vw) translateY(39vh) scale(0.84);
+  }
+  94.1176470588% {
+    transform: translateX(-47vw) translateY(-32vh) scale(0.43);
+  }
+  100% {
+    transform: translateX(-26vw) translateY(-47vh) scale(0.59);
+  }
+}
+.firefly:nth-child(12) {
+  animation-name: move12;
+}
+.firefly:nth-child(12)::before {
+  animation-duration: 17s;
+}
+.firefly:nth-child(12)::after {
+  animation-duration: 17s, 7057ms;
+  animation-delay: 0ms, 2341ms;
+}
+
+@keyframes move12 {
+  0% {
+    transform: translateX(-26vw) translateY(-29vh) scale(0.41);
+  }
+  4.1666666667% {
+    transform: translateX(-4vw) translateY(-44vh) scale(0.28);
+  }
+  8.3333333333% {
+    transform: translateX(41vw) translateY(-33vh) scale(0.52);
+  }
+  12.5% {
+    transform: translateX(27vw) translateY(26vh) scale(0.59);
+  }
+  16.6666666667% {
+    transform: translateX(23vw) translateY(-17vh) scale(0.32);
+  }
+  20.8333333333% {
+    transform: translateX(-21vw) translateY(16vh) scale(0.43);
+  }
+  25% {
+    transform: translateX(19vw) translateY(-19vh) scale(0.69);
+  }
+  29.1666666667% {
+    transform: translateX(-5vw) translateY(2vh) scale(0.85);
+  }
+  33.3333333333% {
+    transform: translateX(17vw) translateY(-18vh) scale(0.78);
+  }
+  37.5% {
+    transform: translateX(-26vw) translateY(-35vh) scale(0.54);
+  }
+  41.6666666667% {
+    transform: translateX(44vw) translateY(-26vh) scale(0.28);
+  }
+  45.8333333333% {
+    transform: translateX(-22vw) translateY(40vh) scale(0.75);
+  }
+  50% {
+    transform: translateX(-36vw) translateY(28vh) scale(0.8);
+  }
+  54.1666666667% {
+    transform: translateX(-47vw) translateY(6vh) scale(0.88);
+  }
+  58.3333333333% {
+    transform: translateX(37vw) translateY(33vh) scale(0.86);
+  }
+  62.5% {
+    transform: translateX(-13vw) translateY(-5vh) scale(0.61);
+  }
+  66.6666666667% {
+    transform: translateX(25vw) translateY(-34vh) scale(0.59);
+  }
+  70.8333333333% {
+    transform: translateX(-4vw) translateY(-6vh) scale(0.38);
+  }
+  75% {
+    transform: translateX(0vw) translateY(-33vh) scale(0.8);
+  }
+  79.1666666667% {
+    transform: translateX(11vw) translateY(-26vh) scale(0.67);
+  }
+  83.3333333333% {
+    transform: translateX(40vw) translateY(-23vh) scale(0.34);
+  }
+  87.5% {
+    transform: translateX(27vw) translateY(39vh) scale(0.74);
+  }
+  91.6666666667% {
+    transform: translateX(31vw) translateY(12vh) scale(0.52);
+  }
+  95.8333333333% {
+    transform: translateX(-3vw) translateY(3vh) scale(0.93);
+  }
+  100% {
+    transform: translateX(-29vw) translateY(-40vh) scale(0.5);
+  }
+}
+.firefly:nth-child(13) {
+  animation-name: move13;
+}
+.firefly:nth-child(13)::before {
+  animation-duration: 11s;
+}
+.firefly:nth-child(13)::after {
+  animation-duration: 11s, 8227ms;
+  animation-delay: 0ms, 522ms;
+}
+
+@keyframes move13 {
+  0% {
+    transform: translateX(-15vw) translateY(-38vh) scale(0.55);
+  }
+  4.5454545455% {
+    transform: translateX(-5vw) translateY(-40vh) scale(0.27);
+  }
+  9.0909090909% {
+    transform: translateX(-5vw) translateY(-35vh) scale(0.66);
+  }
+  13.6363636364% {
+    transform: translateX(42vw) translateY(48vh) scale(0.68);
+  }
+  18.1818181818% {
+    transform: translateX(-8vw) translateY(-37vh) scale(0.3);
+  }
+  22.7272727273% {
+    transform: translateX(15vw) translateY(-33vh) scale(0.33);
+  }
+  27.2727272727% {
+    transform: translateX(6vw) translateY(-4vh) scale(0.92);
+  }
+  31.8181818182% {
+    transform: translateX(-32vw) translateY(4vh) scale(0.49);
+  }
+  36.3636363636% {
+    transform: translateX(1vw) translateY(4vh) scale(0.4);
+  }
+  40.9090909091% {
+    transform: translateX(-43vw) translateY(19vh) scale(0.87);
+  }
+  45.4545454545% {
+    transform: translateX(13vw) translateY(44vh) scale(0.4);
+  }
+  50% {
+    transform: translateX(5vw) translateY(33vh) scale(0.8);
+  }
+  54.5454545455% {
+    transform: translateX(46vw) translateY(-47vh) scale(0.39);
+  }
+  59.0909090909% {
+    transform: translateX(40vw) translateY(-27vh) scale(0.36);
+  }
+  63.6363636364% {
+    transform: translateX(5vw) translateY(-42vh) scale(0.73);
+  }
+  68.1818181818% {
+    transform: translateX(-1vw) translateY(50vh) scale(0.98);
+  }
+  72.7272727273% {
+    transform: translateX(-31vw) translateY(4vh) scale(0.87);
+  }
+  77.2727272727% {
+    transform: translateX(-43vw) translateY(-43vh) scale(0.79);
+  }
+  81.8181818182% {
+    transform: translateX(-41vw) translateY(-36vh) scale(1);
+  }
+  86.3636363636% {
+    transform: translateX(6vw) translateY(31vh) scale(0.61);
+  }
+  90.9090909091% {
+    transform: translateX(23vw) translateY(-4vh) scale(0.46);
+  }
+  95.4545454545% {
+    transform: translateX(34vw) translateY(26vh) scale(0.82);
+  }
+  100% {
+    transform: translateX(26vw) translateY(-33vh) scale(0.38);
+  }
+}
+.firefly:nth-child(14) {
+  animation-name: move14;
+}
+.firefly:nth-child(14)::before {
+  animation-duration: 11s;
+}
+.firefly:nth-child(14)::after {
+  animation-duration: 11s, 10276ms;
+  animation-delay: 0ms, 2888ms;
+}
+
+@keyframes move14 {
+  0% {
+    transform: translateX(3vw) translateY(-23vh) scale(0.86);
+  }
+  4.5454545455% {
+    transform: translateX(17vw) translateY(-33vh) scale(0.51);
+  }
+  9.0909090909% {
+    transform: translateX(-6vw) translateY(34vh) scale(0.84);
+  }
+  13.6363636364% {
+    transform: translateX(13vw) translateY(-11vh) scale(0.94);
+  }
+  18.1818181818% {
+    transform: translateX(9vw) translateY(-47vh) scale(0.3);
+  }
+  22.7272727273% {
+    transform: translateX(-37vw) translateY(-20vh) scale(0.85);
+  }
+  27.2727272727% {
+    transform: translateX(30vw) translateY(-21vh) scale(0.52);
+  }
+  31.8181818182% {
+    transform: translateX(-5vw) translateY(50vh) scale(0.56);
+  }
+  36.3636363636% {
+    transform: translateX(-14vw) translateY(-23vh) scale(0.38);
+  }
+  40.9090909091% {
+    transform: translateX(-9vw) translateY(-15vh) scale(0.45);
+  }
+  45.4545454545% {
+    transform: translateX(26vw) translateY(-20vh) scale(0.45);
+  }
+  50% {
+    transform: translateX(-19vw) translateY(31vh) scale(0.78);
+  }
+  54.5454545455% {
+    transform: translateX(17vw) translateY(-43vh) scale(0.73);
+  }
+  59.0909090909% {
+    transform: translateX(25vw) translateY(-6vh) scale(0.46);
+  }
+  63.6363636364% {
+    transform: translateX(-28vw) translateY(-36vh) scale(0.72);
+  }
+  68.1818181818% {
+    transform: translateX(-45vw) translateY(41vh) scale(0.75);
+  }
+  72.7272727273% {
+    transform: translateX(8vw) translateY(47vh) scale(0.56);
+  }
+  77.2727272727% {
+    transform: translateX(46vw) translateY(-30vh) scale(0.37);
+  }
+  81.8181818182% {
+    transform: translateX(-22vw) translateY(50vh) scale(0.71);
+  }
+  86.3636363636% {
+    transform: translateX(-40vw) translateY(38vh) scale(0.43);
+  }
+  90.9090909091% {
+    transform: translateX(-18vw) translateY(37vh) scale(0.76);
+  }
+  95.4545454545% {
+    transform: translateX(21vw) translateY(20vh) scale(0.86);
+  }
+  100% {
+    transform: translateX(-22vw) translateY(39vh) scale(0.37);
+  }
+}
+.firefly:nth-child(15) {
+  animation-name: move15;
+}
+.firefly:nth-child(15)::before {
+  animation-duration: 16s;
+}
+.firefly:nth-child(15)::after {
+  animation-duration: 16s, 5787ms;
+  animation-delay: 0ms, 1781ms;
+}
+
+@keyframes move15 {
+  0% {
+    transform: translateX(-44vw) translateY(-34vh) scale(1);
+  }
+  4.347826087% {
+    transform: translateX(-14vw) translateY(42vh) scale(0.78);
+  }
+  8.6956521739% {
+    transform: translateX(18vw) translateY(-15vh) scale(0.39);
+  }
+  13.0434782609% {
+    transform: translateX(47vw) translateY(8vh) scale(0.71);
+  }
+  17.3913043478% {
+    transform: translateX(-38vw) translateY(34vh) scale(0.84);
+  }
+  21.7391304348% {
+    transform: translateX(32vw) translateY(16vh) scale(0.48);
+  }
+  26.0869565217% {
+    transform: translateX(-44vw) translateY(40vh) scale(0.81);
+  }
+  30.4347826087% {
+    transform: translateX(-28vw) translateY(30vh) scale(1);
+  }
+  34.7826086957% {
+    transform: translateX(-10vw) translateY(21vh) scale(0.35);
+  }
+  39.1304347826% {
+    transform: translateX(41vw) translateY(26vh) scale(0.29);
+  }
+  43.4782608696% {
+    transform: translateX(34vw) translateY(-21vh) scale(0.47);
+  }
+  47.8260869565% {
+    transform: translateX(-45vw) translateY(-24vh) scale(0.75);
+  }
+  52.1739130435% {
+    transform: translateX(16vw) translateY(48vh) scale(0.63);
+  }
+  56.5217391304% {
+    transform: translateX(-38vw) translateY(44vh) scale(0.96);
+  }
+  60.8695652174% {
+    transform: translateX(32vw) translateY(-27vh) scale(0.35);
+  }
+  65.2173913043% {
+    transform: translateX(-18vw) translateY(46vh) scale(0.82);
+  }
+  69.5652173913% {
+    transform: translateX(32vw) translateY(-18vh) scale(0.69);
+  }
+  73.9130434783% {
+    transform: translateX(34vw) translateY(-23vh) scale(0.8);
+  }
+  78.2608695652% {
+    transform: translateX(8vw) translateY(24vh) scale(0.56);
+  }
+  82.6086956522% {
+    transform: translateX(11vw) translateY(16vh) scale(0.38);
+  }
+  86.9565217391% {
+    transform: translateX(-9vw) translateY(-1vh) scale(0.83);
+  }
+  91.3043478261% {
+    transform: translateX(-3vw) translateY(-11vh) scale(0.84);
+  }
+  95.652173913% {
+    transform: translateX(-15vw) translateY(-35vh) scale(0.78);
+  }
+  100% {
+    transform: translateX(12vw) translateY(18vh) scale(0.95);
+  }
+}
+@keyframes drift {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes flash {
+  0%, 30%, 100% {
+    opacity: 0;
+    box-shadow: 0 0 0vw 0vw yellow;
+  }
+  5% {
+    opacity: 1;
+    box-shadow: 0 0 2vw 0.4vw yellow;
+  }
+}

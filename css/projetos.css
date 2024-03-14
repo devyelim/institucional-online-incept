@@ -1,0 +1,638 @@
+@font-face {
+    font-family: "aquus";
+    src: url(/fontes/Aquus-Regular.ttf) format('truetype');
+  }
+
+body {
+    display: flex;
+    background-color: #2C2B2B !important;
+    overflow-x: hidden;
+    color: #fff !important;
+    transition: .5s;
+}
+
+h1{
+    font-family: "aquus";
+    font-size: min(65px, 18vw) !important;
+    font-style: normal !important;  
+    text-align: center;
+    background: linear-gradient(180deg, #FFF 56.25%, rgba(255, 255, 255, 0.00) 100%);
+    background-clip: text;
+    mix-blend-mode: difference;
+    letter-spacing: min(30px, 3vw);
+}
+
+h2{
+    color: #ffffff !important;
+    font-family: "aquus";
+    font-size: min(65px, 18vw) !important;
+    font-style: normal !important;  
+    text-align: left;
+    /* background: linear-gradient(180deg, #FFF 56.25%, rgba(255, 255, 255, 0.00) 100%); */
+    background-clip: text;
+    /* mix-blend-mode: difference; */
+    /* letter-spacing: min(30px, 3vw); */
+}
+
+.tela-carregamento {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #1E1E1E;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999; /* Garante que a tela de carregamento esteja acima de tudo */
+  opacity: 1; /* Definindo a opacidade inicial */
+  transition: opacity 1s ease;
+}
+
+.herobk {
+  background-image: url(/img/capa.png);
+  position: relative;
+  align-items: center !important;
+  background-attachment: fixed;
+  /* filter: blur(12px); */
+  /*Efeito parallax */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.capa-projeto{
+    height: 70vh;
+    background-image: url(/img/capanavbar.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+.container-titulo{
+    display: block;
+}
+
+
+.breathe {
+    height: 1em !important;
+}
+
+
+.img-carrossel {
+    
+    height: 150px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+  }
+
+.container-projetos{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.container-img{
+    display: flex;
+    background-color: #252525;
+    box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    padding: 20px;
+    align-items: center !important;
+    justify-content: center;
+    height: 500px;
+
+}
+
+.projeto-img {
+    margin: 0 1em;
+    box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2);
+    max-width: 350px !important;
+}
+
+.container-infoprojeto{
+    background-color: #252525;
+    box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2);
+    border-radius: 13px;
+    padding: 20px;
+    height: auto;
+}
+
+.projeto-titulo {
+    padding: 0 1em;
+    font-size: min(25px, 8vw);
+    text-transform: uppercase;
+}
+
+.projeto-autor {
+    font-size: min(16px, 1em);
+}
+
+.img-projeto{
+    border-radius: 10px;
+    height: 70vh !important;
+}
+
+
+
+/* Voltar ao topo */
+
+.voltar-topo {
+  border-radius: 30px !important;
+  height: 40px;
+  width: 70px;
+  background-color: #1E1E1E !important;
+  border: #fff solid 2px !important;
+}
+
+.voltar-topo i {
+  color: #fff;
+  font-weight: 300;
+  position: relative;
+  align-items: center;
+  padding: 0px !important;
+}
+
+
+
+/* Navbar */
+
+div>.interface {
+    display: flex;
+    align-items: center;
+    text-align: right;
+    /* justify-content: space-around; */
+    /* margin: 20px 150px; */
+}
+
+nav.menu-desktop {
+    /* display: flex !important; */
+    color: #fff !important;
+    background-color: transparent !important;
+    margin-inline: auto !important;
+    justify-content: space-between !important;
+    align-items: center;
+    height: auto !important;
+    padding: 20px !important;
+    transition: 0.5s ease-in !important;
+    width: 100%;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    position: absolute;
+    right: 0;
+    padding-right: 130px !important;
+}
+
+nav.menu-desktop ul li a {
+    color: #FFF;
+    text-align: center;
+    font-family: "Montserrat";
+    font-size: 12px !important;
+    font-style: normal;
+    font-weight: 300 !important;
+    line-height: 30px;
+    /* 200% */
+    letter-spacing: 1.875px;
+}
+
+
+
+/* Contato Dropdown */
+.dropbtn {
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    text-align: right;
+}
+
+.dropdown-persona {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    position: absolute;
+    display: none;
+    border-radius: 15px 0px 10px 15px;
+    width: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    /* padding: 10px; */
+}
+
+.dropdown-content li {
+    display: block;
+    font-family: "Montserrat";
+    font-size: 10px;
+    color: #fff;
+    padding: 10px 14px !important;
+    text-decoration: none;
+    width: 200px;
+    transition: .2s;
+    cursor: pointer;
+}
+
+.dropdown-content li:hover {
+    font-size: 10px !important;
+    font-size: 16px;
+    border-radius: 10px 0px 10px;
+    color: #000;
+    width: 200px;
+}
+
+.dropdown-persona:hover .dropdown-content {
+    display: block;
+    background-color: #1e1e1ec8;
+    padding: 0px;
+}
+
+
+/* Dropdown Contato versão Menu mobile */
+
+#contato a {
+    /* height: 100%; */
+    /* background-color: #ffffff34; */
+    /* color: #fff !important; */
+    /* border-radius: 5px 5px 0px 0px; */
+}
+
+#contato li {
+    cursor: pointer;
+    padding: 10px !important;
+    transition: .3s;
+}
+
+#contato li:hover {
+    cursor: pointer;
+    /* padding: 15px 20px !important; */
+    background-color: #1e1e1eb6;
+    border-radius: 5px;
+    width: 100%;
+
+}
+
+#drop-mobile {
+    display: flex;
+    /* Garante que o menu suspenso esteja visível */
+    flex-direction: row;
+    font-size: "Montserrat";
+    /* font-size: 13px; */
+    color: #FFF;
+    /* margin: 0px 20px; */
+    padding: 10px 10px !important;
+    /* background-color: #ffffff07; */
+    align-items: center;
+    justify-content: space-between;
+    /* Outros estilos conforme desejado */
+}
+
+#drop-mobile a {
+    background-color: transparent;
+    padding: 0px;
+    font-size: 12px;
+}
+
+
+.logopersona {
+    width: 45px;
+    height: auto;
+    z-index: 99990;
+    transition: 0.4s ease-in !important;
+}
+
+
+
+ul, li, a .padding-nav {
+    padding: 0px 10px !important;
+}
+
+
+
+/* Menu Mobile */
+@media screen and (max-width: 999px) {
+    .esconder-mobile {
+        display: none;
+    }
+
+    .btn-abrir-menu i {
+        display: block !important;
+    }
+}
+
+.menu-mobile {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 99999;
+    background-color: #1E1E1E;
+    height: 100vh;
+    width: 0vw;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.menu-mobile.abrir-menu {
+    width: 70vw;
+}
+
+.btn-fechar {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.btn-abrir-menu {
+    /* position: absolute;
+    top: 0;
+    right: 0; */
+    /* padding: 25px 30px; */
+    transition: 0.3s ease-in;
+}
+
+.btn-abrir-menu i {
+    color: #fff;
+    font-size: 40px;
+    display: none;
+    text-align: right;
+}
+
+
+.menu-mobile.abrir-menu~.overlay-menu {
+    display: block;
+}
+
+.menu-mobile .btn-fechar {
+    padding: 30px 40px;
+}
+
+.menu-mobile .btn-fechar i {
+    color: #FFF;
+    font-size: 35px;
+    text-align: right;
+    /* cursor: pointer; */
+}
+
+nav.menu-mobile ul {
+    flex-direction: column;
+    text-align: right;
+    padding: 60px 20px !important;
+}
+
+nav.menu-mobile ul li {
+    padding: 20px 0px !important;
+    justify-content: space-around;
+}
+
+nav.menu-mobile ul li a {
+    display: block;
+    font-family: "Montserrat";
+    color: #FFF;
+    font-size: 13px;
+    text-align: right;
+    align-items: end;
+    justify-content: space-between;
+    transition: 0.4s;
+}
+
+nav.menu-mobile ul li a:hover {
+    background-color: #FFF;
+    border-radius: 10px;
+    /* color: #1b5b5f; */
+}
+
+.overlay-menu {
+    display: none;
+    background-color: #00000099;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99990;
+}
+
+/* Itens Navbar Collapse */
+
+
+
+/* #navbarsExample07 {
+    background-color: #b0aeae !important;
+    width: 35vw;
+    padding: 10px;
+  } */
+
+#navbarsExample07 ul li a {
+    text-align: end !important;
+}
+
+/* Fim Intens Navbar Collapse */
+
+
+
+
+/* Itens Nabar */
+
+#ulnav {
+    align-content: end !important;
+}
+
+#ulnav li a {
+    transition: .3s;
+    display: block;
+    position: relative;
+    padding: 0px 8px;
+    margin: 5px;
+    /* font-weight: 200 !important; */
+}
+
+/* #ulnav:hover li a{
+    opacity: 0.7;
+  } */
+
+#ulnav li a:hover {
+    /* transform: scale(1.1); */
+    opacity: 1;
+    color: #fff;
+}
+
+#ulnav li a::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 10%;
+    background-color: #fff;
+    z-index: -1;
+    transform-origin: right;
+    transform: scaleX(0);
+    border-radius: 3px;
+    transition: .4s;
+    /* box-shadow: 1px 0px 1px 0px #2c2b2b5e; */
+
+}
+
+#ulnav li a:hover::before {
+    transform-origin: left;
+    /*Lado onde a animação começa*/
+    transform: scaleX(1);
+    transition: transform .4s;
+}
+
+/* Fim Itens do Navbar */
+
+
+/* Navbar Scroll */
+
+nav.rolagem {
+    /* opacity: 0.9; */
+    background-color: #1E1E1E !important;
+    height: auto;
+    transition: 0.4s ease-in !important;
+    padding: 10px 30px !important;
+    box-shadow: 0px 0px 5px 0px #2c2b2b5e;
+    /* opacity: 0.8; */
+    /* padding: 30px  !important; */
+    /* background: linear-gradient(#1E1E1E, #373737); */
+    /* border-bottom: #ffffff solid 1px; */
+}
+
+nav.rolagem ul li a {
+    color: #ffffff !important;
+    padding-block: 10px;
+}
+
+nav.rolagem ul li a:hover {
+    color: #fff !important;
+    padding-block: 10px;
+    /* font-weight: 200 !important; */
+}
+
+
+nav.rolagem li a {
+    transition: .3s;
+    display: block;
+    position: relative;
+    padding: 0px 8px;
+    margin: 5px;
+}
+
+/* #ulnav:hover li a{
+    opacity: 0.7;
+  } */
+
+nav.rolagem li a:hover {
+    /* transform: scale(1.1); */
+    /* font-weight: 200 !important; */
+    opacity: 1;
+    color: #FDB724;
+
+}
+
+nav.rolagem li a::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 10%;
+    background-color: #FDB724 !important;
+    z-index: -1;
+    transform-origin: right;
+    transform: scaleX(0);
+    border-radius: 3px;
+    transition: .4s;
+}
+
+nav.rolagem li a:hover::before {
+    transform-origin: left;
+    /*Lado onde a animação começa*/
+    transform: scaleX(1);
+    transition: transform .4s;
+}
+
+nav.rolagem .btn-abrir-menu {
+    /* padding: 25px 20px; */
+    align-items: center !important;
+    transition: 0.4s ease-in-out;
+}
+
+
+/* Fim Navbar Scroll */
+
+
+
+/* Rodapé */
+
+i {
+    padding-right: 10px !important;
+}
+
+.incept {
+    text-align: center;
+    font-family: "Montserrat";
+    font-size: 16px;
+    /* font-style: italic; */
+    font-weight: 600;
+    line-height: normal;
+}
+
+.direitosreservados {
+    font-family: "Montserrat";
+    font-size: 16px;
+    /* font-style: italic; */
+    font-weight: 300;
+    line-height: normal;
+}
+
+.rodapestyle {
+    background-color: #1E1E1E;
+    color: #ffffff !important;
+}
+
+.rodapestyle h5 {
+    padding: 0px !important;
+    font-size: 17px;
+}
+
+.rodapestyle ul {
+    padding: 0px !important;
+}
+
+.rodapestyle ul li {
+    padding: 0px !important;
+    font-size: 14px;
+}
+
+.rodapestyle ul li a {
+    color: #ffffff !important;
+    transition: 0.3s;
+    border-bottom: 2px transparent solid;
+    width: max-content;
+}
+
+.rodapestyle ul li a:hover {
+    color: #FDB724 !important;
+    transform: scaleX(1) !important;
+    transition: 0.3s;
+    border-bottom: 2px #FDB724 solid;
+    width: max-content;
+}
+
+.rodapestyle ul h5 {
+    margin-bottom: 1.5rem !important;
+}
+
+.icon-social i {
+    font-size: 28px;
+}
+
+/* Rodapé */
